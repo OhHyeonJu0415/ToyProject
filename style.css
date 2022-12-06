@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #99fff0;
+  background-image: radial-gradient(
+      at 6% 96%,
+      hsla(88, 69%, 76%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 95% 34%, hsla(164, 75%, 66%, 1) 0px, transparent 50%),
+    radial-gradient(at 46% 47%, hsla(187, 94%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 6% 31%, hsla(45, 75%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 64% 56%, hsla(65, 94%, 66%, 1) 0px, transparent 50%),
+    radial-gradient(at 41% 52%, hsla(14, 97%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 48% 47%, hsla(40, 68%, 67%, 1) 0px, transparent 50%);
+}
+
+h1 {
+  font-size: 10vw;
+  font-weight: bold;
+  /* color: #294a4a; */
+  color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  cursor: pointer;
+}
+
+h1 > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #294a4a;
+}
+
+h1 span:nth-child(1) {
+  transition: 0.5s;
+  clip-path: polygon(0 0, 100% 0, 100% 55%, 0 55%);
+  overflow: hidden;
+}
+
+h1:hover span:nth-child(1) {
+  transform: translate(-50%, -50%) translateY(-20px);
+}
+
+h1 span:nth-child(2) {
+  transition: 0.5s;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+h1:hover span:nth-child(2) {
+  transform: translate(-50%, -50%) translateY(20px);
+}
+
+h1 span:nth-child(3) {
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  font-size: 20px;
+  transform: scaleY(0);
+  transition: 0.5s;
+}
+
+h1:hover span:nth-child(3) {
+  transform: translate(-50%, -50%) translateY(10px);
+}
