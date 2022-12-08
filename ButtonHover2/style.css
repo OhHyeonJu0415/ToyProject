@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "KOFIHDrLEEJWTTF-B";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/KOFIHDrLEEJWTTF-B.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "KOFIHDrLEEJWTTF-B";
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  min-width: 100vw;
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+  width: 63%;
+}
+
+div:hover span:nth-child(1)::before {
+  transform: rotateX(0deg) translateY(0);
+}
+
+div:hover span:nth-child(1)::after {
+  transform: rotateX(90deg) translateY(0%);
+}
+
+div:hover span:nth-child(2)::before {
+  transform: rotateX(90deg) translateY(-100%);
+}
+
+div:hover span:nth-child(2)::after {
+  transform: rotateX(0) translateY(0%);
+}
+
+span {
+  font-size: 6em;
+  color: black;
+  margin: 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+div span:nth-child(1) {
+  margin-right: 3.1em;
+}
+
+div span:nth-child(1)::before {
+  padding: 0.2em 0.8em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(data-hello);
+  background-color: rgb(220, 255, 116);
+  transform-origin: top;
+  transform: rotateX(90deg) translateY(-100%);
+  transition: 0.5s;
+  display: block;
+}
+
+div span:nth-child(1)::after {
+  padding: 0.2em 0.8em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(data-hello);
+  background-color: rgb(191, 123, 255);
+  transform-origin: bottom;
+  transform: rotateX(0deg) translateY(0);
+  transition: 0.5s;
+  display: block;
+}
+
+div span:nth-child(2)::before {
+  padding: 0.2em 0.8em;
+  content: attr(data-world);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(220, 255, 116);
+  transform-origin: top;
+  transform: rotateX(0deg) translateY(0);
+  transition: 0.5s;
+  display: block;
+}
+
+div span:nth-child(2)::after {
+  padding: 0.2em 0.8em;
+  content: attr(data-world);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(191, 123, 255);
+  transform-origin: bottom;
+  transform: rotateX(90deg) translateY(0);
+  transition: 0.5s;
+}
