@@ -4,4 +4,4 @@ HTML/CSS를 이용한 Text Hover Event
 
 
 
-<img width="60%" src="https://user-images.githubusercontent.com/71424881/206710624-8e1068d1-517b-40d4-b441-8ec4f72b066a.gif"/>
+<img width="60%" src="https://user-images.githubusercontent.com/71424881/206711153-fe19e6eb-9327-44fc-9e9f-3cd936b58dc1.gif"/>
