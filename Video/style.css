@@ -49,17 +49,3 @@ span {
   mix-blend-mode: screen;
   text-transform: uppercase;
 }
-
-/* span {
-  font-size: 6rem;
-  width: 100vw;
-  height: 100vh;
-  line-height: 100vh;
-  align-items: center;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
-  text-transform: uppercase;
-  overflow: hidden;
-  background: black;
-  mix-blend-mode: screen;
-} */
