@@ -6,5 +6,147 @@
 
 body {
   min-width: 100vw;
+  min-height: 100vh;
   background-color: black;
+}
+
+.container {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 40vw;
+  height: 40vw;
+  /* border: 1px red solid; */
+  /* overflow: hidden; */
+}
+
+.back {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(rgb(254, 231, 174), rgb(26, 26, 76) 60%);
+  display: grid;
+  /* transform: rotate(180deg); */
+  /* animation: backColor 4s linear infinite; */
+}
+
+.day {
+  position: relative;
+}
+
+.night {
+  /* animation: night 3s 2s linear infinite; */
+}
+
+.sun,
+.moon,
+.moonShadow,
+.moonShadow1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+}
+
+.sun {
+  background-color: rgb(203, 70, 13);
+  top: 10%;
+}
+
+.night {
+  position: relative;
+}
+
+.moon {
+  background-color: rgb(212, 199, 99);
+  bottom: 5%;
+}
+
+.moonShadow {
+  background-color: rgb(26, 26, 76);
+  left: 51.5%;
+  bottom: 5%;
+  transform: translate(-51.5%, 7%);
+  z-index: 1;
+}
+
+.star {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 0px 0.2rem rgb(244, 239, 143));
+}
+
+.starShape {
+  position: absolute;
+  width: 0.8vw;
+  height: 0.8vw;
+  background-color: rgb(235, 226, 162);
+  clip-path: polygon(
+    50% 0,
+    60% 40%,
+    100% 50%,
+    60% 60%,
+    50% 100%,
+    40% 60%,
+    0 50%,
+    40% 40%
+  );
+}
+
+.star1 {
+  right: 38%;
+  bottom: 20%;
+}
+
+.star2 {
+  width: 1vw;
+  height: 1vw;
+  left: 30%;
+  bottom: 31%;
+}
+
+.star3 {
+  width: 0.5vw;
+  height: 0.5vw;
+  left: 35%;
+  bottom: 26%;
+}
+
+.star4 {
+  width: 1.2vw;
+  height: 1.2vw;
+  right: 42%;
+  bottom: 40%;
+}
+
+@keyframes backColor {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes night {
+  0% {
+    transform: translateX(-80px) translateY(-80px);
+  }
+  25% {
+    transform: translateX(-60px) translateY(-40px);
+  }
+  50% {
+    transform: translateX(0) translateY(0);
+  }
+  75% {
+    transform: translateX(60px) translateY(-40px);
+  }
+  100% {
+    transform: translateX(100px) translateY(-80px);
+  }
 }
