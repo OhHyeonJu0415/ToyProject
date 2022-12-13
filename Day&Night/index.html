@@ -6,27 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Day And Night</title>
+    <script>
+      function dayClick() {
+        //배경 낮으로
+        document.getElementById("turn").style.transform = "rotate(0deg)";
+
+        //밤 글씨 지우기
+        document.getElementById("textNight").style.opacity = "0";
+        document.getElementById("text1").style.removeProperty("animation");
+
+        //2초 뒤(배경 바뀌고 난 뒤) ufo 애니메이션 지우기
+        setTimeout(
+          () =>
+            document.getElementById("ufo").style.removeProperty("animation"),
+          2000
+        );
+      }
+      function nightClick() {
+        //배경 밤으로
+        document.getElementById("turn").style.transform = "rotate(180deg)";
+
+        //밤 글씨 띄우기
+        document.getElementById("textNight").style.transition = "2s";
+        document.getElementById("textNight").style.opacity = "1";
+        document.getElementById("text1").style.animation =
+          "text1 2s 2s infinite";
+
+        //ufo 애니메이션
+        document.getElementById("ufo").style.animation =
+          "ufoMove 10s 1s infinite";
+
+        // document.getElementById("vim").style.animation =
+        //   "ufoAttack 10s 1s infinite;";
+      }
+    </script>
   </head>
   <body>
     <div class="container">
-      <div class="back">
-        <!-- Day -->
-        <div class="day">
-          <div class="sun"></div>
-        </div>
+      <button class="dayButton" onClick="dayClick()">D a y</button>
+      <div id="textNight">
+        <h1 id="text1">EMERGENCY!</h1>
+      </div>
+      <div class="backContainer">
+        <div class="back" id="turn">
+          <!-- Day -->
+          <div class="day">
+            <div class="sun"></div>
+          </div>
 
-        <!-- Night -->
-        <div class="night">
-          <div class="moon"></div>
-          <div class="moonShadow"></div>
-          <div class="star">
-            <div class="starShape star1"></div>
-            <div class="starShape star2"></div>
-            <div class="starShape star3"></div>
-            <div class="starShape star4"></div>
+          <!-- Night -->
+          <div class="night">
+            <!-- moon -->
+            <div class="moon"></div>
+            <div class="moonShadow"></div>
+
+            <!-- background -->
+            <div class="buliding">
+              <div class="buliding1">
+                <div class="bulid">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid1">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid2">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid3"><div class="glass"></div></div>
+                <div class="bulid bulid4">
+                  <div class="glass"></div>
+                </div>
+              </div>
+              <div class="buliding2">
+                <div class="bulid bulid4">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid1">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid2">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid3"><div class="glass"></div></div>
+              </div>
+            </div>
+
+            <!-- star -->
+            <div class="star">
+              <div class="starShape star1"></div>
+              <div class="starShape star2"></div>
+              <div class="starShape star3"></div>
+              <div class="starShape star4"></div>
+              <div class="starShape star5"></div>
+              <div class="starShape star6"></div>
+              <div class="starShape star7"></div>
+            </div>
+
+            <!-- ufo -->
+            <div class="ufo" id="ufo">
+              <div id="vim"></div>
+              <div></div>
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
+      <button class="nightButton" onClick="nightClick()">N i g h t</button>
     </div>
   </body>
 </html>

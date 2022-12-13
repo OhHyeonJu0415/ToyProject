@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "KOFIHDrLEEJWTTF-B";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/KOFIHDrLEEJWTTF-B.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bitbit";
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"),
+    url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,26 +25,85 @@ body {
 }
 
 .container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  margin-top: 10vh;
+  width: 12vw;
+  height: 6vw;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 0.2rem white solid;
+  background-color: transparent;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "bitbit";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0.2rem rgb(133, 133, 133);
+}
+
+#textNight {
   position: absolute;
-  top: 0%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -30%);
+  font-family: "bitbit";
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: rgb(252, 175, 175);
+  display: flex;
+  opacity: 0;
+  font-size: 0.9rem;
+}
+
+#text1 {
+  opacity: 0;
+}
+
+.dayButton {
+  filter: drop-shadow(0px 0px 0.2rem rgb(255, 116, 62));
+}
+
+.dayButton:hover {
+  background-color: rgba(255, 116, 62, 0.1);
+}
+
+.nightButton {
+  filter: drop-shadow(0px 0px 0.2rem rgb(70, 70, 255));
+}
+
+.nightButton:hover {
+  background-color: rgba(70, 70, 255, 0.1);
+}
+
+.backContainer {
+  position: relative;
   width: 40vw;
   height: 40vw;
   /* border: 1px red solid; */
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .back {
   position: absolute;
-  top: 70%;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  width: 40vw;
+  height: 40vw;
   border-radius: 50%;
-  background: linear-gradient(rgb(254, 231, 174), rgb(26, 26, 76) 60%);
+  background: linear-gradient(
+    rgb(254, 231, 174) 50%,
+    rgb(26, 26, 76) 50%,
+    rgb(5, 5, 47) 70%
+  );
   display: grid;
-  /* transform: rotate(180deg); */
-  /* animation: backColor 4s linear infinite; */
+  transform: rotate(0deg);
+  transition: 2s;
 }
 
 .day {
@@ -38,13 +111,14 @@ body {
 }
 
 .night {
-  /* animation: night 3s 2s linear infinite; */
+  position: relative;
+  /* border: 1px red solid; */
+  overflow: hidden;
 }
 
 .sun,
 .moon,
-.moonShadow,
-.moonShadow1 {
+.moonShadow {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -10%);
@@ -62,19 +136,118 @@ body {
   position: relative;
 }
 
+/* night_moon */
 .moon {
   background-color: rgb(212, 199, 99);
   bottom: 5%;
 }
 
 .moonShadow {
-  background-color: rgb(26, 26, 76);
+  background-color: rgb(5, 5, 47);
   left: 51.5%;
   bottom: 5%;
   transform: translate(-51.5%, 7%);
   z-index: 1;
 }
 
+/* night_building */
+.buliding {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 90%;
+  height: 30%;
+  opacity: 0.4;
+}
+
+.buliding1,
+.buliding2 {
+  position: absolute;
+  display: flex;
+  right: 0;
+  width: 50%;
+  height: 90%;
+  overflow: hidden;
+  /* border: 1px rgb(0, 255, 149) solid; */
+}
+
+/* left_building */
+.bulid {
+  background-color: black;
+  width: 15%;
+  height: 80%;
+  margin: 0 6% 0 0;
+  padding: 10% 2% 2% 2%;
+  filter: drop-shadow(0px 0px 0.2rem rgb(52, 52, 45));
+}
+
+.bulid1 {
+  width: 17%;
+  height: 50%;
+  margin: 0 2% 0 2%;
+  padding: 6% 2% 2% 2%;
+}
+
+.bulid2 {
+  width: 12%;
+  height: 78%;
+  padding: 12% 2% 2% 2%;
+}
+
+.bulid3 {
+  width: 12%;
+  height: 70%;
+  margin: 0 16% 0 0;
+}
+
+.bulid4 {
+  width: 20%;
+  height: 64%;
+  padding: 8% 2% 2% 2%;
+}
+
+.glass {
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(210, 210, 154);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 40%,
+    0% 40%,
+    0% 60%,
+    100% 60%,
+    100% 100%,
+    0 100%
+  );
+}
+
+.glassPath3 {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 20%,
+    0% 20%,
+    0% 40%,
+    100% 40%,
+    100% 60%,
+    0% 60%,
+    0% 80%,
+    100% 80%,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* right_building */
+.buliding2 {
+  left: 5%;
+  width: 30%;
+  height: 70%;
+}
+
+/* night_start */
 .star {
   width: 100%;
   height: 100%;
@@ -124,29 +297,181 @@ body {
   bottom: 40%;
 }
 
-@keyframes backColor {
-  0% {
-    transform: rotate(0);
-  }
+.star5 {
+  width: 0.58vw;
+  height: 0.58vw;
+  right: 32%;
+  bottom: 30%;
+}
+
+.star6 {
+  width: 0.48vw;
+  height: 0.48vw;
+  left: 40%;
+  bottom: 48%;
+}
+
+.star7 {
+  /* background-color: rgb(247, 243, 210); */
+  width: 0.58vw;
+  height: 0.58vw;
+  right: 20%;
+  bottom: 52%;
+}
+
+.ufo {
+  position: absolute;
+  width: 4vw;
+  height: 2vw;
+  top: 22%;
+  right: 12%;
+  transform: rotate(32deg);
+  filter: drop-shadow(0px 0px 0.2rem rgb(255, 251, 174));
+
+  /* transform: rotate(180deg); */
+}
+
+#vim {
+  position: absolute;
+  width: 30%;
+  /* height: 10vw; */
+  background-color: rgb(183, 251, 166);
+  top: -9vw;
+  right: 50%;
+  height: 10vw;
+  transform: translate(50%, 0) rotateX(180deg);
+  clip-path: polygon(40% 0%, 60% 0%, 80% 100%, 20% 100%);
+  opacity: 0;
+  animation: ufoAttack 10s infinite;
+}
+
+.ufo div:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  height: 26%;
+  background-color: rgb(129, 189, 134);
+  top: 30%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+}
+
+.ufo div:nth-child(3) {
+  position: absolute;
+  width: 50%;
+  height: 40%;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@keyframes text1 {
+  0%,
   100% {
-    transform: rotate(360deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
-@keyframes night {
-  0% {
-    transform: translateX(-80px) translateY(-80px);
-  }
-  25% {
-    transform: translateX(-60px) translateY(-40px);
+@keyframes text2 {
+  0%,
+  100% {
+    opacity: 1;
   }
   50% {
-    transform: translateX(0) translateY(0);
+    opacity: 0;
   }
-  75% {
-    transform: translateX(60px) translateY(-40px);
-  }
+}
+
+@keyframes ufoMove {
+  0%,
   100% {
-    transform: translateX(100px) translateY(-80px);
+    top: 20%;
+    right: 12%;
+    transform: rotate(21deg);
+  }
+  15%,
+  90% {
+    top: 32%;
+    right: 24%;
+    transform: rotate(-20deg);
+  }
+  28% {
+    top: 22%;
+    right: 42%;
+    transform: rotate(15deg);
+  }
+  35% {
+    top: 28%;
+    right: 57%;
+    transform: rotate(-10deg);
+  }
+  45% {
+    top: 35%;
+    right: 72%;
+    transform: rotate(28deg);
+  }
+  52% {
+    top: 28%;
+    right: 79%;
+    transform: rotate(20deg);
+  }
+  60% {
+    top: 24%;
+    right: 62%;
+    transform: rotate(-15deg);
+  }
+  70% {
+    top: 19%;
+    right: 50%;
+    transform: rotate(15deg);
+  }
+  80% {
+    top: 22%;
+    right: 36%;
+    transform: rotate(-4deg);
+  }
+}
+
+@keyframes ufoAttack {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  15%,
+  77% {
+    opacity: 0;
+  }
+
+  20%,
+  72% {
+    opacity: 1;
+  }
+
+  25%,
+  67% {
+    opacity: 0;
+  }
+
+  45%,
+  55% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  91% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 1;
   }
 }
