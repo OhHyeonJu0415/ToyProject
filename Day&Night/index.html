@@ -10,10 +10,26 @@
       function dayClick() {
         //배경 낮으로
         document.getElementById("turn").style.transform = "rotate(0deg)";
+        document.body.style.backgroundColor = "rgb(253, 250, 240)";
+
+        //버튼 색 바꾸기
+        document.getElementById("dayButton").style.color = "rgb(255, 148, 131)";
+        document.getElementById("dayButton").style.border =
+          "0.2rem rgb(255, 164, 157) solid";
+        document.getElementById("nightButton").style.color =
+          "rgb(124, 99, 237)";
+        document.getElementById("nightButton").style.border =
+          "0.2rem rgb(126, 104, 223) solid";
 
         //밤 글씨 지우기
         document.getElementById("textNight").style.opacity = "0";
         document.getElementById("text1").style.removeProperty("animation");
+
+        //낮 글씨 띄우기
+        document.getElementById("textDay").style.transition = "2s";
+        document.getElementById("textDay").style.opacity = "1";
+        document.getElementById("text0").style.animation =
+          "text1 2s 2s infinite";
 
         //2초 뒤(배경 바뀌고 난 뒤) ufo 애니메이션 지우기
         setTimeout(
@@ -25,6 +41,19 @@
       function nightClick() {
         //배경 밤으로
         document.getElementById("turn").style.transform = "rotate(180deg)";
+        document.body.style.backgroundColor = "black";
+
+        //버튼 색 바꾸기
+        document.getElementById("dayButton").style.color = "white";
+        document.getElementById("dayButton").style.border =
+          "0.2rem white solid";
+        document.getElementById("nightButton").style.color = "white";
+        document.getElementById("nightButton").style.border =
+          "0.2rem white solid";
+
+        //낮 글씨 지우기
+        document.getElementById("textDay").style.opacity = "0";
+        document.getElementById("text0").style.removeProperty("animation");
 
         //밤 글씨 띄우기
         document.getElementById("textNight").style.transition = "2s";
@@ -43,7 +72,11 @@
   </head>
   <body>
     <div class="container">
-      <button class="dayButton" onClick="dayClick()">D a y</button>
+      <button id="dayButton" onClick="dayClick()">D a y</button>
+      <div id="textDay">
+        <h1 id="text0">WAKE UP !</h1>
+        <h1 id="text0">it's time to start</h1>
+      </div>
       <div id="textNight">
         <h1 id="text1">EMERGENCY!</h1>
       </div>
@@ -52,6 +85,58 @@
           <!-- Day -->
           <div class="day">
             <div class="sun"></div>
+
+            <!-- cloud -->
+            <div class="cloud">
+              <div class="leftCloud">
+                <div class="baseCloud"></div>
+                <div class="clouds clouds1"></div>
+                <div class="clouds clouds2"></div>
+                <div class="clouds clouds3"></div>
+              </div>
+              <div class="rightCloud">
+                <div class="baseRightCloud"></div>
+                <div class="clouds clouds1"></div>
+                <div class="clouds clouds2"></div>
+                <div class="clouds clouds3"></div>
+              </div>
+            </div>
+
+            <!-- airplane -->
+            <div id="airPlane">
+              <img src="airPlane.svg" />
+            </div>
+
+            <!-- background -->
+            <div class="buliding">
+              <div class="buliding1">
+                <div class="bulid">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid1">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid2">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid3"><div class="glass"></div></div>
+                <div class="bulid bulid4">
+                  <div class="glass"></div>
+                </div>
+              </div>
+              <div class="buliding2">
+                <div class="bulid bulid4">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid1">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid2">
+                  <div class="glass"></div>
+                </div>
+                <div class="bulid bulid3"><div class="glass"></div></div>
+              </div>
+            </div>
           </div>
 
           <!-- Night -->
@@ -111,7 +196,7 @@
           </div>
         </div>
       </div>
-      <button class="nightButton" onClick="nightClick()">N i g h t</button>
+      <button id="nightButton" onClick="nightClick()">N i g h t</button>
     </div>
   </body>
 </html>
