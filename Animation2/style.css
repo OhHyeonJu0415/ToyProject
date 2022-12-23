@@ -7,8 +7,8 @@
 body {
   min-width: 100vw;
   min-height: 100vh;
-  background-color: black;
-  animation: backColor 8s linear infinite;
+  background-color: rgb(255, 255, 255);
+  animation: backColor 4s linear infinite;
 }
 
 .container {
@@ -22,15 +22,41 @@ body {
 
 #ball {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  animation: ballColor 8s linear infinite;
   z-index: 1;
-  border: none;
+  animation: ball 1s infinite;
+  transition-timing-function: cubic-bezier(0.85, 0.25, 0.25, 0.85);
+}
+
+#ball::before {
+  content: "";
+  background-color: transparent;
+  width: 115%;
+  height: 115%;
+  display: inline-block;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  animation: backColor 4s linear infinite;
+}
+
+#ball::after {
+  content: "";
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  animation: ballColor 4s linear infinite;
 }
 
 #bar {
@@ -38,238 +64,93 @@ body {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 80px;
+  width: 70px;
   height: 300px;
-  animation: bar 8s linear infinite;
+  animation: turn 4s linear infinite;
+  overflow: hidden;
+}
+
+#bar::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 300px;
+  height: 40px;
+  background: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1395 630'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; stroke: blue; stroke-linejoin: round; stroke-width: 15px; %7D%0A.cls-1 %7B stroke-dasharray: 4034; stroke-dashoffset: 8068; animation: dash 4s linear infinite; %7D @keyframes dash %7B to %7B stroke-dashoffset: 0; %7D%0A%7D %3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 2%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolyline class='cls-1' points='0 312.85 170 312.85 210 288 262 331 298 277 321 625 359 5 404 341 447 278 480 312.85 681 312.85 720.33 286 759 349 796 281 826 625 861 5 909 341 945 273 979 312.85 1395 312.85' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+    no-repeat;
+  background-size: 100% 100%;
+  transform: translate(-50%, -50%);
+  animation: barInvert 4s linear infinite;
+}
+
+@keyframes backColor {
+  0%,
+  50% {
+    background-color: rgb(45, 122, 255);
+  }
+  51%,
+  100% {
+    background-color: rgb(220, 224, 100);
+  }
 }
 
 @keyframes ball {
   0%,
   100% {
     top: 0;
-    width: 120px;
-    height: 120px;
-  }
-  30% {
-    width: 120px;
+    width: 100px;
+    height: 100px;
   }
   50% {
     top: 110px;
-    width: 160px;
-    height: 100px;
+    width: 110px;
+    height: 90px;
+  }
+}
+
+@keyframes turn {
+  0%,
+  45% {
+    transform: translate(-50%, 0) rotate(0deg);
+    box-shadow: 0 0 0 3px white inset;
+    background-color: white;
+  }
+  54%,
+  90% {
+    transform: translate(-50%, 0) rotate(-180deg);
+    box-shadow: 0 0 0 3px black inset;
+    background-color: black;
+  }
+  100% {
+    transform: translate(-50%, 0) rotate(-360deg);
+    box-shadow: 0 0 0 3px black inset;
+    background-color: black;
   }
 }
 
 @keyframes ballColor {
-  0% {
-    border: 15px rgb(159, 56, 255) solid;
-    background: linear-gradient(
-      45deg,
-      rgb(20, 0, 39),
-      rgb(55, 0, 107),
-      rgb(91, 0, 175),
-      rgb(126, 0, 243)
-    );
-    top: 0;
-    width: 120px;
-    height: 120px;
+  0%,
+  45% {
+    box-shadow: 0 0 0 3px white inset;
+    background-color: transparent;
   }
-
-  4%,
-  16.55%,
-  29%,
-  41.55%,
   54%,
-  66.55%,
-  79%,
-  91.55% {
-    width: 120px;
-  }
-
-  6.25%,
-  18.75%,
-  31.25%,
-  43.75%,
-  56.25%,
-  68.75%,
-  81.25%,
-  93.75% {
-    top: 110px;
-    width: 160px;
-    height: 100px;
-  }
-  7%,
-  19.5%,
-  32%,
-  44.5%,
-  57%,
-  69.5%,
-  82%,
-  94.5% {
-    top: 120px;
-    width: 160px;
-    height: 100px;
-  }
-  12.5%,
-  37.5%,
-  62.5%,
-  87.5% {
-    top: 0;
-    width: 120px;
-    height: 120px;
-  }
-  25% {
-    border: 15px rgb(159, 56, 255) solid;
-    background: linear-gradient(
-      45deg,
-      rgb(20, 0, 39),
-      rgb(55, 0, 107),
-      rgb(91, 0, 175),
-      rgb(126, 0, 243)
-    );
-  }
-  25%,
-  50%,
-  75%,
   100% {
-    top: 0;
-    width: 120px;
-    height: 120px;
-  }
-  26% {
-    border: 15px rgb(45, 122, 255) solid;
-    background: linear-gradient(
-      45deg,
-      rgb(0, 10, 28),
-      rgb(0, 35, 96),
-      rgb(0, 60, 164),
-      rgb(0, 85, 232)
-    );
-    top: 0;
-    width: 120px;
-    height: 120px;
-  }
-  50% {
-    border: 15px rgb(45, 122, 255) solid;
-    background: linear-gradient(
-      45deg,
-      rgb(0, 10, 28),
-      rgb(0, 35, 96),
-      rgb(0, 60, 164),
-      rgb(0, 85, 232)
-    );
-  }
-  51% {
-    border: 15px rgb(102, 224, 100) solid;
-    background: linear-gradient(
-      45deg,
-      rgb(9, 43, 9),
-      rgb(21, 100, 20),
-      rgb(33, 157, 31),
-      rgb(46, 213, 43)
-    );
-    top: 0;
-    width: 120px;
-    height: 120px;
-  }
-  75% {
-    border: 15px rgb(102, 224, 100) solid;
-    background: linear-gradient(
-      45deg,
-      rgb(9, 43, 9),
-      rgb(21, 100, 20),
-      rgb(33, 157, 31),
-      rgb(46, 213, 43)
-    );
-  }
-  76% {
-    border: 15px rgb(255, 231, 135) solid;
-    background: linear-gradient(
-      45deg,
-      rgb(118, 94, 0),
-      rgb(186, 149, 0),
-      rgb(254, 203, 0),
-      rgb(255, 217, 67)
-    );
-    top: 0;
-    width: 120px;
-    height: 120px;
-  }
-  100% {
-    border: 15px rgb(255, 231, 135) solid;
-    background: linear-gradient(
-      45deg,
-      rgb(118, 94, 0),
-      rgb(186, 149, 0),
-      rgb(254, 203, 0),
-      rgb(255, 217, 67)
-    );
+    box-shadow: 0 0 0 3px black inset;
+    background-color: transparent;
   }
 }
 
-@keyframes bar {
+@keyframes barInvert {
   0%,
-  24%,
+  45% {
+    filter: invert(0);
+  }
+  54%,
   100% {
-    transform: translate(-50%, 0) rotate(0deg);
-    background: linear-gradient(
-      to top,
-      rgb(20, 0, 39),
-      rgb(55, 0, 107),
-      rgb(91, 0, 175),
-      rgb(126, 0, 243)
-    );
-  }
-  26%,
-  49% {
-    transform: translate(-50%, 0) rotate(180deg);
-    background: linear-gradient(
-      to bottom,
-      rgb(0, 10, 28),
-      rgb(0, 35, 96),
-      rgb(0, 60, 164),
-      rgb(0, 85, 232)
-    );
-  }
-  51%,
-  74% {
-    transform: translate(-50%, 0) rotate(0deg);
-    background: linear-gradient(
-      to top,
-      rgb(9, 43, 9),
-      rgb(21, 100, 20),
-      rgb(33, 157, 31),
-      rgb(46, 213, 43)
-    );
-  }
-  76%,
-  98% {
-    transform: translate(-50%, 0) rotate(180deg);
-    background: linear-gradient(
-      to bottom,
-      rgb(118, 94, 0),
-      rgb(186, 149, 0),
-      rgb(254, 203, 0),
-      rgb(255, 217, 67)
-    );
-  }
-}
-
-@keyframes backColor {
-  0%,
-  25% {
-    background-color: rgb(159, 56, 255);
-  }
-  26%,
-  50% {
-    background-color: rgb(45, 122, 255);
-  }
-  51%,
-  75% {
-    background-color: rgb(102, 224, 100);
-  }
-  76%,
-  100% {
-    background-color: rgb(255, 231, 135);
+    filter: invert(1);
   }
 }
