@@ -9,6 +9,7 @@ body {
   min-height: 100vh;
   background-color: rgb(255, 255, 255);
   animation: backColor 4s linear infinite;
+  overflow: hidden;
 }
 
 .container {
@@ -16,13 +17,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 250px;
-  height: 500px;
+  width: 400px;
+  height: 510px;
+  overflow: hidden;
 }
 
 #headSet {
   position: absolute;
-  top: -10px;
+  top: 0px;
   left: 50%;
   transform: translate(-50%, 0);
   width: 130px;
@@ -140,7 +142,7 @@ body {
 @keyframes ball {
   0%,
   100% {
-    top: 0;
+    top: 10px;
     width: 100px;
     height: 100px;
   }
@@ -154,7 +156,7 @@ body {
 @keyframes headSet {
   0%,
   100% {
-    top: -10px;
+    top: 0px;
     width: 130px;
     height: 80px;
   }
@@ -206,5 +208,42 @@ body {
   54%,
   100% {
     filter: invert(1);
+  }
+}
+
+#note {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 40px;
+  transform: translate(-50%, -50%);
+  /* transition: 2s; */
+}
+
+#note > img,
+#noteBounce > img {
+  width: 100%;
+}
+
+#noteBounce {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 40px;
+  transform: translate(-50%, -50%);
+  /* transition: 2s; */
+}
+
+@keyframes note {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translate(-100px, -100px);
+  }
+  100% {
+    transform: translate(-100px, 0px);
   }
 }
