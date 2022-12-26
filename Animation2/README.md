@@ -22,5 +22,7 @@ HTML/CSS를 이용한 Bouncing Ball Animation
 
 📌 invert
 
+📌 svg
 
-<img width="40%" src="https://user-images.githubusercontent.com/71424881/209510511-2edc7969-c575-4f9b-a610-bc5aff25055b.gif"/>
+
+<img width="60%" src="https://user-images.githubusercontent.com/71424881/209510511-2edc7969-c575-4f9b-a610-bc5aff25055b.gif"/>
