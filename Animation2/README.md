@@ -25,4 +25,4 @@ HTML/CSS를 이용한 Bouncing Ball Animation
 📌 svg
 
 
-<img width="60%" src="https://user-images.githubusercontent.com/71424881/209510511-2edc7969-c575-4f9b-a610-bc5aff25055b.gif"/>
+<img width="50%" src="https://user-images.githubusercontent.com/71424881/209510511-2edc7969-c575-4f9b-a610-bc5aff25055b.gif"/>
