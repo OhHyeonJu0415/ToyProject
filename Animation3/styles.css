@@ -5,45 +5,63 @@
 
 body {
   width: 100vw;
-  width: 100vh;
+  /* height: 100vh; */
   background-color: rgb(36, 36, 36);
 }
 
 .container {
+  position: relative;
   margin: 5vw 8vw;
   width: 84vw;
   height: calc(100vh - 10vw);
 }
 
 .photoList {
-  display: flex;
   width: 100%;
   height: 100%;
+  justify-content: space-between;
 }
 
-.photoList > div {
-  flex: 1;
-  margin: 0 10px;
+.photo {
+  width: 25%;
+  float: left;
+  height: 100%;
+  /* box-shadow: inset 0 0 1rem rgb(40, 40, 40); */
   transition: background-position 20s;
   transition-timing-function: linear;
   cursor: pointer;
   font-family: "Playfair Display", serif;
-  font-weight: 800;
+  color: #fff;
+  background-size: cover;
+}
+
+.click,
+.season {
+  display: block;
+  margin-left: 5%;
+}
+
+.click {
+  margin: 10% 0 0% 5%;
+  font-size: 1rem;
 }
 
 .season {
-  display: block;
-  margin-top: 10%;
-  margin-left: 5%;
-  color: #fff;
   font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.season + span {
+  font-size: 1rem;
+  margin-left: 5%;
 }
 
 #spring {
   background-position: 0% 50%;
   background-image: linear-gradient(
+      rgba(46, 46, 46, 0.8),
       rgba(46, 46, 46, 0.5),
-      rgba(46, 46, 46, 0.5)
+      rgba(46, 46, 46, 0.3)
     ),
     url("images/spring.jpg");
 }
@@ -59,19 +77,21 @@ body {
 }
 
 #summer {
-  background-position: 40% 50%;
+  background-position: 0% 50%;
   background-image: linear-gradient(
+      rgba(46, 46, 46, 0.8),
       rgba(46, 46, 46, 0.5),
-      rgba(46, 46, 46, 0.5)
+      rgba(46, 46, 46, 0.3)
     ),
     url("images/summer.jpg");
 }
 
 #autumn {
-  background-position: 60% 50%;
+  background-position: 100% 50%;
   background-image: linear-gradient(
+      rgba(46, 46, 46, 0.8),
       rgba(46, 46, 46, 0.5),
-      rgba(46, 46, 46, 0.5)
+      rgba(46, 46, 46, 0.3)
     ),
     url("images/autumn.jpg");
 }
@@ -79,12 +99,46 @@ body {
 #winter {
   background-position: 100% 50%;
   background-image: linear-gradient(
+      rgba(46, 46, 46, 0.8),
       rgba(46, 46, 46, 0.5),
-      rgba(46, 46, 46, 0.5)
+      rgba(46, 46, 46, 0.3)
     ),
     url("images/winter.jpg");
 }
 
+.base {
+  height: 0;
+}
+
 .mainPhoto {
-  /* border: 1px solid rgb(255, 221, 0); */
+  background-color: black;
+  transition: 1s;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75%;
+}
+
+.changeH {
+  transition: 1s;
+  height: 20%;
+}
+
+.displayNone {
+  display: none;
+}
+
+.margin10 {
+  font-size: 2rem;
+  margin-top: 10%;
+}
+
+.displayWidthNone {
+  transition: 0.5s;
+  width: 0;
+}
+
+.mainPic {
+  background-size: contain;
+  background-repeat: no-repeat;
 }
