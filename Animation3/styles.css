@@ -5,12 +5,13 @@
 
 body {
   width: 100vw;
-  /* height: 100vh; */
   background-color: rgb(36, 36, 36);
 }
 
 .container {
+  font-family: "Playfair Display", serif;
   position: relative;
+  font-style: italic;
   margin: 5vw 8vw;
   width: 84vw;
   height: calc(100vh - 10vw);
@@ -27,11 +28,9 @@ body {
   width: 25%;
   float: left;
   height: 100%;
-  /* box-shadow: inset 0 0 1rem rgb(40, 40, 40); */
   transition: background-position 20s;
   transition-timing-function: linear;
   cursor: pointer;
-  font-family: "Playfair Display", serif;
   color: #fff;
   background-size: cover;
 }
@@ -84,7 +83,7 @@ body {
       rgba(46, 46, 46, 0.5),
       rgba(46, 46, 46, 0.3)
     ),
-    url("images/summer1.jpg");
+    url("images/summer.jpg");
 }
 
 #autumn {
@@ -115,15 +114,15 @@ body {
   position: absolute;
   right: 0;
   margin-top: 2%;
-  width: 6vw;
-  height: 2vw;
+  padding: 0.4vw 1.5vw;
   font-size: 1rem;
   background-color: rgba(225, 225, 225, 0.3);
-  border: none;
+  border: 1px solid #a9a9a9;
   font-family: "Playfair Display", serif;
-  /* font-weight: 800; */
   color: #fff;
   border-radius: 10px;
+  font-style: normal;
+  cursor: pointer;
 }
 
 .mainPhoto {

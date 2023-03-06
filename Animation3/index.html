@@ -8,14 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,800&display=swap"
       rel="stylesheet"
     />
     <title>Animation</title>
   </head>
   <body>
     <div class="container">
-      <div class="photoList">
+      <div id="mainPhoto" class="base"></div>
+      <div id="list" class="photoList">
         <div id="spring" class="photo">
           <span class="click"> Click</span>
           <span class="season"> Spring</span>
@@ -32,8 +33,10 @@
           <span class="click"> Click</span>
           <span class="season">Winter</span>
         </div>
+        <div id="close" class="displayNone">
+          <button class="btn">close</button>
+        </div>
       </div>
-      <div id="mainPhoto" class="base"></div>
     </div>
     <script src="scripts.js"></script>
   </body>
