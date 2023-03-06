@@ -2,20 +2,20 @@ const seasons = document.getElementsByClassName("photo");
 const clickText = document.getElementsByClassName("click");
 const seasonText = document.getElementsByClassName("season");
 const mainPhoto = document.getElementById("mainPhoto");
+const photoList = document.getElementById("list");
 
 for (let i = 0; i < 4; i++) {
   seasons[i].addEventListener("click", (e) => {
     for (let j = 0; j < 4; j++) {
+      photoList.classList.add("floatRight");
       mainPhoto.classList.add("mainPhoto");
       seasons[j].classList.add("changeH");
       clickText[j].classList.add("displayNone");
       seasonText[j].classList.add("margin10");
       if (i != j) {
-        seasons[j].classList.remove("displayWidthNone");
-        seasonText[j].classList.remove("displayNone");
+        seasons[j].classList.remove("changeBorder");
       } else {
-        seasons[j].classList.add("displayWidthNone");
-        seasonText[j].classList.add("displayNone");
+        seasons[j].classList.add("changeBorder");
       }
     }
 

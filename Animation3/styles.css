@@ -20,6 +20,7 @@ body {
   width: 100%;
   height: 100%;
   justify-content: space-between;
+  float: right;
 }
 
 .photo {
@@ -83,7 +84,7 @@ body {
       rgba(46, 46, 46, 0.5),
       rgba(46, 46, 46, 0.3)
     ),
-    url("images/summer.jpg");
+    url("images/summer1.jpg");
 }
 
 #autumn {
@@ -110,17 +111,30 @@ body {
   height: 0;
 }
 
+.btn {
+  position: absolute;
+  right: 0;
+  margin-top: 2%;
+  width: 6vw;
+  height: 2vw;
+  font-size: 1rem;
+  background-color: rgba(225, 225, 225, 0.3);
+  border: none;
+  font-family: "Playfair Display", serif;
+  /* font-weight: 800; */
+  color: #fff;
+  border-radius: 10px;
+}
+
 .mainPhoto {
-  background-color: black;
   transition: 1s;
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 75%;
+  top: 0;
+  width: 70%;
+  height: 100%;
 }
 
 .changeH {
-  transition: 1s;
   height: 20%;
 }
 
@@ -128,9 +142,20 @@ body {
   display: none;
 }
 
+.changeBorder {
+  box-shadow: inset 1px 1px 1px #fff, inset -1px -1px 1px #fff;
+}
+
 .margin10 {
   font-size: 2rem;
   margin-top: 10%;
+}
+
+.floatRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .displayWidthNone {
@@ -139,6 +164,7 @@ body {
 }
 
 .mainPic {
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: 0;
 }
