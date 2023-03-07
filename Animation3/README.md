@@ -4,6 +4,7 @@ HTML/CSS/Vanilla Javascript를 이용한 Event Animation
 
 
 
+
 📌 addEventListener
 
 📌 background-position
@@ -12,7 +13,10 @@ HTML/CSS/Vanilla Javascript를 이용한 Event Animation
 
 
 
-#### 요구사항
+
+
+
+### 요구사항
 
 1. 사진 위에 마우스를 올렸을 때 사진이 옆으로 움직인다.
    
@@ -28,7 +32,9 @@ HTML/CSS/Vanilla Javascript를 이용한 Event Animation
 
 
 
-#### 실행화면
+
+
+### 실행화면
 
 
 <img width="60%" src="https://user-images.githubusercontent.com/71424881/223332599-a3dd55be-f79d-48f4-9ec8-865b5e3d6bbf.png"/>
