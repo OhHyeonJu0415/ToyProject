@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 174, 82);
+  font-family: "Luckiest Guy", cursive;
+  font-size: 12rem;
+  user-select: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  perspective: 500px;
+  perspective-origin: bottom;
+  transform-style: preserve-3d;
+  color: rgb(35, 35, 35);
+}
+
+.text > span {
+  display: block;
+  margin: 0 30px;
+}
+
+.textE {
+  animation: textE 3s ease-in-out infinite;
+}
+
+.textN {
+  animation: textN 3s ease-in-out infinite;
+}
+
+.textF {
+  animation: textF 2s infinite;
+  transition-timing-function: cubic-bezier(0.61, -0.48, 0.31, 1.4);
+}
+
+.textP {
+  animation: textP 3s ease-in-out infinite;
+}
+
+.textE::before,
+.textE::after,
+.textN::before,
+.textN::after,
+.textF::before,
+.textF::after,
+.textP::before,
+.textP::after {
+  content: attr(data-mbti);
+  position: absolute;
+  z-index: -1;
+  transition: 0.5s;
+  top: 5px;
+  left: 5px;
+}
+
+.textE::after {
+  color: rgb(172, 78, 250);
+}
+
+.textE::before {
+  color: rgb(154, 40, 247);
+}
+
+.textN::after {
+  color: rgb(153, 119, 255);
+}
+
+.textN::before {
+  color: rgb(118, 72, 255);
+}
+
+.textF::after {
+  color: rgb(121, 119, 255);
+}
+
+.textF::before {
+  color: #514eff;
+}
+
+.textP::after {
+  color: rgb(119, 151, 255);
+}
+
+.textP::before {
+  color: rgb(72, 115, 255);
+}
+
+.textE:hover,
+.textN:hover,
+.textF:hover,
+.textP:hover {
+  animation: init 1s forwards;
+}
+
+.textE:hover::before,
+.textN:hover::before,
+.textF:hover::before,
+.textP:hover::before {
+  top: -150px;
+  left: 5px;
+}
+
+.textE:hover::after,
+.textN:hover::after,
+.textF:hover::after,
+.textP:hover::after {
+  top: -160px;
+  left: 0px;
+  text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255),
+    -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
+}
+
+@keyframes textE {
+  0%,
+  100% {
+    transform: rotateY(7deg) translateY(-5px);
+  }
+  50% {
+    transform: rotateY(-10deg) translateY(8px);
+  }
+}
+
+@keyframes textN {
+  0%,
+  100% {
+    transform: rotateX(-12deg) rotateY(-2deg) translateY(6px);
+  }
+  50% {
+    transform: rotateX(5deg) rotateY(7deg) translateY(-12px);
+  }
+}
+
+@keyframes textF {
+  0% {
+    transform: rotateY(0) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(50deg);
+  }
+  85% {
+    transform: rotateY(360deg) rotateX(-50deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(0deg);
+  }
+}
+
+@keyframes textP {
+  0%,
+  100% {
+    transform: rotateY(10deg) scale(1);
+  }
+  50% {
+    transform: rotateY(0) scale(0.9);
+  }
+}
+
+@keyframes init {
+  0%,
+  100% {
+    transform: rotateY(0deg) rotateX(0deg) scale(1);
+  }
+}
