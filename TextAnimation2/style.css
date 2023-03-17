@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@font-face {
+  font-family: "Cafe24ClassicType-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -9,7 +16,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(255, 174, 82);
+  background-color: rgb(255, 170, 72);
   font-family: "Luckiest Guy", cursive;
   font-size: 200px;
   user-select: none;
@@ -21,6 +28,8 @@ body {
 }
 
 .text {
+  width: 700px;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -30,6 +39,13 @@ body {
   perspective-origin: bottom;
   transform-style: preserve-3d;
   color: rgb(35, 35, 35);
+  align-items: center;
+  justify-content: center;
+}
+
+.textBottom {
+  top: 70%;
+  cursor: auto;
 }
 
 .text > span {
@@ -70,7 +86,8 @@ body {
   left: 5px;
 }
 
-.textE::after {
+.textE::after,
+.exE {
   color: rgb(172, 78, 250);
 }
 
@@ -78,7 +95,8 @@ body {
   color: rgb(154, 40, 247);
 }
 
-.textN::after {
+.textN::after,
+.exE + span {
   color: rgb(153, 119, 255);
 }
 
@@ -86,7 +104,8 @@ body {
   color: rgb(118, 72, 255);
 }
 
-.textF::after {
+.textF::after,
+.exF {
   color: rgb(121, 119, 255);
 }
 
@@ -94,7 +113,8 @@ body {
   color: #514eff;
 }
 
-.textP::after {
+.textP::after,
+.exF + span {
   color: rgb(119, 151, 255);
 }
 
@@ -125,6 +145,22 @@ body {
   left: 0px;
   text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255),
     -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
+}
+
+.explanation {
+  font-size: 30px;
+  font-family: "Cafe24ClassicType-Regular";
+  /* font-weight: bold; */
+  text-align: center;
+  height: 50px;
+  width: 225px;
+  opacity: 0;
+  text-shadow: 1px 1px 0 rgb(255, 255, 255);
+}
+
+.opacity1 {
+  transition: 0.5s;
+  opacity: 1;
 }
 
 @keyframes textE {
@@ -179,11 +215,38 @@ body {
   }
 }
 
-#flowerContainer {
+.flower {
+  z-index: -2;
+  position: absolute;
+  filter: drop-shadow(5px 5px 0px #000000);
+}
+
+#flowerRainbow {
   width: 200px;
   height: 200px;
-  position: relative;
-  filter: drop-shadow(5px 5px 0px #000000);
+  top: 18%;
+  left: 22%;
+  animation: shake 5s linear infinite;
+}
+
+#flowerGreen {
+  width: 60px;
+  height: 60px;
+  bottom: 35%;
+  right: 21%;
+  filter: drop-shadow(2px 2px 0px #000000);
+  animation: shake 5s 1s linear infinite;
+}
+
+#flowerYellow {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  right: 24%;
+  filter: drop-shadow(3px 3px 0px #000000);
+  animation: shake 3s linear infinite;
+  /* animation: wave 5s linear infinite;
+  animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1); */
 }
 
 .circle {
@@ -195,6 +258,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .leaf {
@@ -204,8 +270,54 @@ body {
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
-  /* border: 2px solid black; */
   transform-origin: bottom;
   top: 0%;
   left: 50%;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    transform: translateY(0px) translateX(0%);
+  }
+  25% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translateY(-100px) translateX(-25vw);
+  }
+  37.5% {
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    transform: translateY(0px) translateX(-37.5vw);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translateY(-80px) translateX(-50vw);
+  }
+  67.5% {
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    transform: translateY(0px) translateX(-67.5vw);
+  }
+  75% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translateY(-100px) translateX(-75vw);
+  }
+  100% {
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    transform: translateY(0px) translateX(-100vw);
+  }
 }
