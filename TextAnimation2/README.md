@@ -38,5 +38,5 @@ HTML/CSS/Vanilla JS를 이용한 Text Animation
 
 <img width="60%" src="https://user-images.githubusercontent.com/71424881/225881817-8d774c16-d0bd-4516-a1f7-5c19159d6c85.png"/>
 <img width="60%" src="https://user-images.githubusercontent.com/71424881/225881808-7913ba39-00f0-4971-9ff9-8c6761198620.png"/>
-<img width="60%" src="https://user-images.githubusercontent.com/71424881/225885379-cd544eec-cce4-4c74-9cb3-948566380e9d.png"/>
+<img width="60%" src="https://user-images.githubusercontent.com/71424881/225885830-bfd3ed59-1312-4492-9f6c-50dddb52c413.png"/>
 
