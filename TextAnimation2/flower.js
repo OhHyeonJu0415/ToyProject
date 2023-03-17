@@ -1,6 +1,7 @@
 const flowerRainbow = document.getElementById("flowerRainbow");
 const flowerGreen = document.getElementById("flowerGreen");
 const flowerYellow = document.getElementById("flowerYellow");
+const flowerBack = document.getElementById("flowerBack");
 const colorRainbow = [
   "#fa3a25", //빨간색
   "#fe6720", //다홍색
@@ -45,8 +46,9 @@ function makeFlower(element, text, size, startColor = 0, endColor = 0) {
 }
 // 😀☺😊😆😆😉🤩😏
 makeFlower(flowerRainbow, "😝", "70px");
-makeFlower(flowerGreen, "😉", "20px", 5, 8);
+makeFlower(flowerGreen, "😉", "20px", 5, 12);
 makeFlower(flowerYellow, "😊", "30px", 4, 12);
+makeFlower(flowerBack, "😊", "30px");
 
 for (let i = 0; i < 4; i++) {
   mbti[i].addEventListener("mouseover", () => {

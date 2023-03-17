@@ -16,7 +16,9 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(255, 170, 72);
+  overflow: hidden;
+  /* background-color: rgb(255, 170, 72); */
+  background-color: rgb(255, 188, 112);
   font-family: "Luckiest Guy", cursive;
   font-size: 200px;
   user-select: none;
@@ -38,7 +40,8 @@ body {
   perspective: 500px;
   perspective-origin: bottom;
   transform-style: preserve-3d;
-  color: rgb(35, 35, 35);
+  /* color: rgb(35, 35, 35); */
+  color: #fff;
   align-items: center;
   justify-content: center;
 }
@@ -86,40 +89,44 @@ body {
   left: 5px;
 }
 
-.textE::after,
-.exE {
-  color: rgb(172, 78, 250);
+.textE::after {
+  /* color: rgb(172, 78, 250); */
+  color: #fe9c13;
 }
 
 .textE::before {
-  color: rgb(154, 40, 247);
+  /* color: rgb(154, 40, 247); */
+  color: #fe6720;
 }
 
-.textN::after,
-.exE + span {
-  color: rgb(153, 119, 255);
+.textN::after {
+  /* color: rgb(153, 119, 255); */
+  color: #f3eb43;
 }
 
 .textN::before {
-  color: rgb(118, 72, 255);
+  /* color: rgb(118, 72, 255); */
+  color: #ffca08;
 }
 
-.textF::after,
-.exF {
-  color: rgb(121, 119, 255);
+.textF::after {
+  /* color: rgb(121, 119, 255); */
+  color: #36d57d;
 }
 
 .textF::before {
-  color: #514eff;
+  /* color: #514eff; */
+  color: #6ed265;
 }
 
-.textP::after,
-.exF + span {
-  color: rgb(119, 151, 255);
+.textP::after {
+  /* color: rgb(119, 151, 255); */
+  color: #5edcfd;
 }
 
 .textP::before {
-  color: rgb(72, 115, 255);
+  /* color: rgb(72, 115, 255); */
+  color: #42589c;
 }
 
 .textE:hover,
@@ -150,12 +157,11 @@ body {
 .explanation {
   font-size: 30px;
   font-family: "Cafe24ClassicType-Regular";
-  /* font-weight: bold; */
   text-align: center;
   height: 50px;
   width: 225px;
   opacity: 0;
-  text-shadow: 1px 1px 0 rgb(255, 255, 255);
+  color: #fff;
 }
 
 .opacity1 {
@@ -249,6 +255,16 @@ body {
   animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1); */
 }
 
+#flowerBack {
+  z-index: -10;
+  width: 100vw;
+  height: 100vw;
+  right: 0%;
+  bottom: -120%;
+  animation: back 30s linear infinite;
+  filter: none;
+}
+
 .circle {
   position: absolute;
   width: 35%;
@@ -319,5 +335,14 @@ body {
   100% {
     animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
     transform: translateY(0px) translateX(-100vw);
+  }
+}
+
+@keyframes back {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
