@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgb(141, 202, 214),
+    rgb(125, 183, 195)
+  );
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.window,
+#replay {
+  position: absolute;
+  left: 50%;
+}
+
+.window {
+  top: 40%;
+  transform: translate(-50%, -40%);
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  /* overflow: hidden; */
+}
+
+#replay {
+  border: 1px solid blue;
+  width: 120px;
+  height: 50px;
+  top: calc(50% + 200px);
+  transform: translate(-50%, -50%);
+}
