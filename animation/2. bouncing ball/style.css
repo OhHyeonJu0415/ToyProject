@@ -213,12 +213,11 @@ body {
 
 #note {
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   z-index: 9999;
   width: 40px;
   transform: translate(-50%, -50%);
-  /* transition: 2s; */
 }
 
 #note > img,
@@ -228,8 +227,8 @@ body {
 
 #noteBounce {
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   z-index: 9999;
   width: 40px;
   transform: translate(-50%, -50%);
@@ -238,12 +237,44 @@ body {
 
 @keyframes note {
   0% {
-    transform: none;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    opacity: 1;
+    /* transform: translate(100px, 100px); */
   }
   50% {
-    transform: translate(-100px, -100px);
+    opacity: 0;
+    transform: translate(100px, 0px);
+  }
+  51% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  55% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes noteBounce {
+  0%,
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  75% {
+    opacity: 1;
+    /* transform: translate(-100%, -100px); */
   }
   100% {
+    opacity: 0;
     transform: translate(-100px, 0px);
   }
 }

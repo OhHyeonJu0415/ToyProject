@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="headSet"></div>
+      <div id="ball"></div>
+      <div id="bar"></div>
+    </div>
+    <div id="note">
+      <img src="note.png" alt="note" />
+    </div>
+    <!-- <div id="noteBounce">
+      <img src="note.png" alt="note" />
+    </div> -->
+    <script>
+      const note = document.querySelector("#note");
+      // const noteBounce = document.querySelector("#noteBounce");
+
+      // function addElement(mouseX, mouseY) {
+      //   // div element 생성
+      //   var newDiv = document.createElement("div");
+      //   //생성한 div에 id 설정
+      //   newDiv.setAttribute("id", "noteBounce");
+      //   // div 아래 컨텐츠를 이미지로 생성
+      //   var img = document.createElement("img");
+      //   img.src = "note.png";
+      //   img.alt = "note";
+      //   // div 안에 컨텐츠 추가
+      //   newDiv.appendChild(img);
+
+      //   // DOM에 컨텐츠 추가
+      //   setTimeout(() => {
+      //     var note = document.getElementById("noteBounce");
+      //     document.body.insertBefore(newDiv, note);
+
+      //     //현재 위치로 이동
+      //     note.style.left = mouseX + "px";
+      //     note.style.top = mouseY + "px";
+      //     note.style.animation = "note 1s forwards";
+      //     setTimeout(() => {
+      //       note.remove();
+      //     }, 2000);
+      //   }, 2000);
+      // }
+
+      // setTimeout(function noteMove() {
+      //   // fn();
+      //   // if(시간이 더 필요한 경우)  setTimeout(cbFn,1000*5)
+      //   // else
+      //   noteBounce.style.transform = `translate(-100px,0px)`;
+      //   setTimeout(noteMove, 1000);
+      //   // noteBounce.style.transform = `none`;
+      // }, 1000);
+
+      function move(element, x, y) {
+        var x = x + 1;
+        var y = y - 1;
+        element.style.transition = "2s";
+        element.style.transform = `translate(${x}px,${y}px)`;
+        element.style.opacity = "0";
+      }
+
+      function remove(element, x, y) {
+        setTimeout(() => {
+          element.style.transition = "0.1s";
+          element.style.transform = "none";
+          // element.style.removeProperty("transform");
+          element.style.left = x + "px";
+          element.style.top = y + "px";
+        }, 2000);
+        element.style.opacity = "1";
+      }
+
+      document.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        note.style.left = mouseX + "px";
+        note.style.top = mouseY + "px";
+
+        // noteBounce.style.left = mouseX + "px";
+        // noteBounce.style.top = mouseY + "px";
+
+        // note.style.animation = "note 2s infinite";
+        // noteBounce.style.animation = "noteBounce 2s infinite";
+
+        // move(noteBounce, mouseX, mouseY);
+        // remove(noteBounce, mouseX, mouseY);
+      });
+    </script>
+  </body>
+</html>
