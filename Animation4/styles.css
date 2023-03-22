@@ -14,11 +14,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    rgb(166, 224, 235),
-    rgb(125, 184, 196)
-  );
+  overflow: hidden;
   font-family: "Cafe24ClassicType-Regular";
 }
 
@@ -26,6 +22,20 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(207, 236, 255),
+    rgb(136, 213, 255),
+    #c4fffd,
+    rgb(255, 238, 218),
+    rgb(255, 198, 213)
+  );
+  background-position: top;
+  background-size: 100vw 200vh;
+}
+
+.backgroundColor {
+  animation: backColor 7s linear forwards;
 }
 
 .window,
@@ -35,7 +45,26 @@ body {
 }
 
 #replay {
-  border: 2px solid #fff;
+  transition: 1s;
+  border: 3px solid transparent;
+  background-size: 200% 100%;
+  background-position: left;
+  background-image: linear-gradient(
+      rgb(255, 251, 245, 0.5),
+      rgb(255, 251, 245, 0.5)
+    ),
+    linear-gradient(
+      35deg,
+      rgba(255, 61, 61, 0.4),
+      rgba(255, 163, 34, 0.4),
+      rgba(255, 220, 19, 0.4),
+      rgba(86, 234, 69, 0.4),
+      rgba(44, 101, 244, 0.4),
+      rgba(122, 34, 255, 0.4)
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
   width: 120px;
   height: 50px;
   top: calc(50% + 200px);
@@ -54,17 +83,20 @@ body {
   user-select: none;
 }
 
+#replay:hover {
+  background-position: right;
+}
+
 .window {
   top: 40%;
   transform: translate(-50%, -40%);
-  width: 500px;
+  width: 600px;
   height: 300px;
-  border: 1px solid black;
   overflow: hidden;
 }
 
 .cloud {
-  background: linear-gradient(to bottom, #e2f5ff, #cdf0ff, #afd8ea);
+  background: linear-gradient(to bottom, #e2f5ff, #cdf0ff, #b9e4f7);
   position: absolute;
 }
 
@@ -181,7 +213,7 @@ body {
 .mid {
   width: 40%;
   height: 15%;
-  bottom: 16%;
+  bottom: 7%;
   right: -5%;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 20px;
@@ -301,6 +333,24 @@ body {
   }
 }
 
+@keyframes backColor {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: bottom;
+  }
+}
+
+@keyframes buttonColor {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
 .clouds {
   position: absolute;
   top: 0;
@@ -326,4 +376,89 @@ body {
 .clouds4 {
   animation: cloud4 9s forwards;
   animation-timing-function: cubic-bezier(0.68, -0.05, 0.265, 0.8);
+}
+
+#rainbowContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.rainbow {
+  position: absolute;
+  transform-origin: bottom;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+  width: 500px;
+  height: 250px;
+  border-radius: 250px 250px 0 0;
+  bottom: 0%;
+  border: 20px solid rgba(255, 147, 147, 0.596);
+  border-bottom: none !important;
+}
+
+@keyframes rainbow {
+  to {
+    transform: translate(-50%, 0) rotate(-0);
+  }
+}
+
+.bottomCloud {
+  background: linear-gradient(to bottom, rgba(228, 250, 255, 0.6), #cfeeff);
+  position: absolute;
+  bottom: 0;
+}
+
+.left1 {
+  left: 5%;
+  width: 110px;
+  height: 50px;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+}
+
+.left2 {
+  left: 26%;
+  width: 70px;
+  height: 35px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 40px;
+}
+
+.left3 {
+  background: linear-gradient(to bottom, rgba(228, 250, 255, 0.99), #cfeeff);
+  left: 18%;
+  bottom: -4%;
+  width: 90px;
+  height: 40px;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 10px;
+}
+
+.right1 {
+  right: 5%;
+  width: 120px;
+  height: 40px;
+  border-top-right-radius: 90px;
+  border-top-left-radius: 90px;
+}
+
+.right2 {
+  background: linear-gradient(to bottom, rgba(228, 250, 255, 0.99), #cfeeff);
+  bottom: -7%;
+  right: 10%;
+  width: 130px;
+  height: 50px;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 90px;
+}
+
+.right3 {
+  right: 27%;
+  width: 60px;
+  height: 30px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
 }
