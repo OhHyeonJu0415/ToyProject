@@ -52,6 +52,10 @@ li {
   display: none;
 }
 
+#menu {
+  display: none;
+}
+
 .line {
   width: 100%;
   border-bottom: 1px solid rgb(197, 197, 197);
@@ -99,6 +103,7 @@ li {
   }
 
   #menu {
+    display: block;
     opacity: 0;
     position: absolute;
     width: 24px;
