@@ -1,4 +1,3 @@
-window.scroll(0, 0);
 const VH = window.screen.height;
 const container = document.getElementsByClassName("container");
 const auroras = container[1].children;
@@ -49,8 +48,6 @@ function mountain(cursor) {
 }
 
 function rain(cursor) {
-  //   rains[0].classList.add("mountaintop");
-  //   rains[0].classList.remove("hidden");
   if (cursor > VH * 3) {
     rains[2].classList.remove("hidden");
     rains[2].classList.add("rainBottom");
@@ -75,4 +72,20 @@ function division() {
   }
 }
 
-window.addEventListener("scroll", division);
+function optimizeAnimation(callback) {
+  let ticking = false;
+
+  return () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(() => {
+        callback();
+        ticking = false;
+      });
+    }
+  };
+}
+
+window.addEventListener("scroll", optimizeAnimation(division), {
+  passive: true,
+});
