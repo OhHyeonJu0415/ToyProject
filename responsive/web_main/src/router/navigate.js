@@ -4,8 +4,6 @@ import Antalya from "../page/Antalya.js";
 import Cappadocia from "../page/Cappadocia.js";
 import Pamukkale from "../page/Pamukkale.js";
 
-const $container = document.querySelector("#app");
-
 export function navigate(move, isReplace = false) {
   const historyEvent = new CustomEvent("historyChange", {
     detail: {
@@ -20,32 +18,22 @@ export function navigate(move, isReplace = false) {
 export const routes = [
   {
     path: /^\/$/,
-    element: () => {
-      new Home($container);
-    },
+    element: Home,
   },
   {
     path: /^\/Ankara$/,
-    element: () => {
-      new Ankara($container);
-    },
+    element: Ankara,
   },
   {
     path: /^\/Antalya$/,
-    element: () => {
-      new Antalya($container);
-    },
+    element: Antalya,
   },
   {
     path: /^\/Cappadocia$/,
-    element: () => {
-      new Cappadocia($container);
-    },
+    element: Cappadocia,
   },
   {
     path: /^\/Pamukkale$/,
-    element: () => {
-      new Pamukkale($container);
-    },
+    element: Pamukkale,
   },
 ];

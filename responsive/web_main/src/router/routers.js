@@ -1,4 +1,5 @@
 import { routes } from "./navigate.js";
+import NotFound from "../page/NotFound.js";
 
 class Routers {
   constructor($container) {
@@ -12,8 +13,14 @@ class Routers {
   }
 
   route = () => {
-    const data = routes.find(this.findRoute);
-    data.element();
+    // const data = routes.find(this.findRoute);
+    // data.element();
+
+    const data = routes.find(this.findRoute).element;
+    if (data === undefined) {
+      data = NotFound;
+    }
+    new data(this.$container);
   };
 
   init = () => {
@@ -30,7 +37,7 @@ class Routers {
       this.route();
 
       window.addEventListener("popstate", () => {
-        route();
+        this.route();
       });
     });
   };
