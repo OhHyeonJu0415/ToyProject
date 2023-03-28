@@ -43,6 +43,42 @@ header > div > h1::first-letter {
   padding: 0 4px;
 }
 
+footer {
+  margin-top: 15vw;
+  width: 100vw;
+  height: 150px;
+  background-color: rgba(241, 243, 246, 0.7);
+  font-size: 1rem;
+  padding: 3vw 15vw;
+  text-align: right;
+}
+
+footer p:first-child {
+  margin-bottom: 1vw;
+  text-decoration: underline;
+  position: relative;
+}
+
+footer p:last-child {
+  position: relative;
+  text-decoration: underline;
+}
+
+footer p:first-child::before,
+footer p:last-child::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 16%;
+  height: 2px;
+  background-color: rgb(233, 180, 180);
+}
+
+footer p:first-child::before {
+  width: 8%;
+}
+
 li {
   list-style: none;
   float: left;
@@ -101,7 +137,7 @@ article {
   background-position: 40% 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: saturate(35%);
+  filter: saturate(45%);
 }
 
 .mainTitle {
