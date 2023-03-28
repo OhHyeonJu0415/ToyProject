@@ -7,26 +7,38 @@
   font-family: "PT Serif", serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* header 1920px~1024px */
 
 header {
-  width: 70vw;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  width: 100vw;
   height: 70px;
-  margin: 0 15vw;
+  padding: 0 15vw;
+  background-color: #ffffff36;
+}
+
+header > div {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header > h1 {
+header > div > h1 {
   color: black;
   font-size: 2rem;
-  font-weight: bold;
 }
 
-header > h1::first-letter {
+header > div > h1::first-letter {
   color: #fff;
-  background-color: rgb(28, 157, 86);
+  background-color: rgb(246, 111, 111);
   padding: 0 4px;
 }
 
@@ -56,20 +68,186 @@ li {
   display: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .line {
+  z-index: 9;
+  position: absolute;
+  top: 70px;
   width: 100%;
-  border-bottom: 1px solid rgb(197, 197, 197);
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.container {
+  width: 70vw;
+  height: 100%;
+}
+
+article {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(208, 225, 219);
+}
+
+.mainPic {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/main3.jpeg");
+  background-position: 40% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: saturate(35%);
+}
+
+.mainTitle {
+  width: 70vw;
+  margin: 0 auto;
+  padding-top: 25vh;
+  color: rgb(0, 55, 156);
+  font-size: 4rem;
+  text-align: right;
+  text-shadow: -1px -1px #ffffff, 1px 1px #ffffff, 0px 1px #ffffff,
+    1px 0px #ffffff, -1px 0px #ffffff, 0px -1px #ffffff;
+}
+
+.part1,
+.part3,
+.part2,
+.part4 {
+  background-color: #fff;
+  width: 100vw;
+  height: 85vh;
+  position: relative;
+}
+
+.part1,
+.part3 {
+  padding-left: 15vw;
+}
+
+.part2,
+.part4 {
+  padding-right: 15vw;
+}
+
+.part4 {
+  margin-bottom: 10vh;
+}
+
+.mainPage {
+  background-size: cover;
+  position: absolute;
+  bottom: 0%;
+  height: 70vh;
+}
+
+.subPic1 {
+  right: 0;
+  width: 55%;
+  background-image: url("./images/ankara/ankara8.jpeg");
+  background-position: 0% 100%;
+}
+
+.subPic2 {
+  width: 45%;
+  background-image: url("./images/antalya/antalya0.jpeg");
+  background-position: 60% 90%;
+  left: 0;
+}
+
+.subPic3 {
+  right: 0;
+  width: 55%;
+  background-image: url("./images/cappadocia/cappadocia5.jpeg");
+  background-position: 20% 100%;
+}
+
+.subPic4 {
+  left: 0;
+  width: 45%;
+  filter: saturate(150%);
+  background-image: url("./images/pamukkale/pamukkale10.jpeg");
+  background-position: 0% 100%;
+}
+
+.mainPage > div {
+  width: 100%;
+}
+
+.mainPage > div > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5vh;
+}
+
+.mainPage > div > p {
+  margin-bottom: 2.5vh;
+}
+
+.mainPage > div > p > span {
+  font-size: 1.1rem;
+  display: inline;
+}
+
+.mainPage > div > button {
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: 10vh;
+  padding: 1vh 2vh;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.introduce1,
+.introduce2,
+.introduce3,
+.introduce4 {
+  padding: 5vh;
+}
+
+.introduce1 {
+  background-color: rgba(241, 243, 246, 1);
+  left: 0;
+  width: 45%;
+  padding-left: 15vw;
+  font-size: 1rem;
+}
+
+.introduce2 {
+  width: 55%;
+  background-color: rgba(241, 243, 246, 0.7);
+  right: 0;
+  padding-right: 15vw;
+  padding-left: 10vh;
+}
+
+.introduce3 {
+  width: 45%;
+  padding-left: 15vw;
+  background-color: rgba(241, 243, 246, 0.7);
+  left: 0;
+}
+
+.introduce4 {
+  width: 55%;
+  background-color: rgba(241, 243, 246, 1);
+  right: 0;
+  padding-right: 15vw;
+  padding-left: 10vh;
 }
 
 /* header 1023px~320px */
 
 @media (width<1024px) {
   header {
-    width: calc(100% - 80px);
-    --header-height: 70px;
-    margin: 0 40px;
+    width: 100vw;
+    height: 70px;
+    padding: 0 40px;
   }
-  header > h1 {
+  header > div > h1 {
     display: inline;
     font-size: 1.5rem;
     margin-left: 16px;
@@ -86,8 +264,9 @@ li {
     padding: 0.5vw 0;
     position: absolute;
     right: 40px;
-    top: var(--header-height);
+    top: 70px;
     border: 1px solid rgb(197, 197, 197);
+    background-color: #fff;
   }
 
   .menuDrop > li {
@@ -108,18 +287,58 @@ li {
     position: absolute;
     width: 24px;
     height: 24px;
+    cursor: pointer;
   }
 
   #menu:checked ~ .menuDrop {
     display: block;
   }
+
+  .mainPic {
+    background-position-x: 25%;
+  }
+
+  .mainTitle {
+    font-size: 3.8rem;
+  }
+}
+
+@media (width <=640px) {
+  .mainTitle {
+    font-size: 2.5rem;
+  }
 }
 
 /* header 1921px~ */
 @media (width>1920px) {
-  header {
+  header > div {
     width: 1344px;
     margin: 0 auto;
+  }
+
+  .mainTitle {
+    position: static;
+    margin: 0 auto;
+    font-size: 4rem;
+    width: 1344px;
+  }
+
+  .mainPage > div {
+    height: 100%;
+    width: 522px;
+    position: relative;
+    /* margin: auto; */
+    /* margin-left: 0; */
+  }
+
+  .odd {
+    margin: auto;
+    margin-right: 0;
+  }
+
+  .even {
+    margin: auto;
+    margin-left: 0;
   }
 }
 
