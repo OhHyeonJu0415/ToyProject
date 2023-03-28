@@ -1,4 +1,4 @@
-import { data } from "../info/main.js";
+import { introduce, path } from "../info/main.js";
 
 class Home {
   constructor($container) {
@@ -35,7 +35,16 @@ class Home {
     const div2 = document.createElement("div");
     num % 2 == 0 ? div2.classList.add("even") : div2.classList.add("odd");
 
-    div2.innerHTML = data[num - 1];
+    div2.innerHTML = introduce[num - 1];
+
+    //버튼 생성 및 추가
+    const button = document.createElement("button");
+    button.classList.add("seeMore");
+    const a = document.createElement("a");
+    a.setAttribute("href", `${path[num - 1]}`);
+    a.innerText = "see more";
+    button.appendChild(a);
+    div2.appendChild(button);
 
     div1.appendChild(div2);
     article.appendChild(div1);
