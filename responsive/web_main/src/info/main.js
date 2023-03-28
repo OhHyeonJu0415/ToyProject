@@ -25,6 +25,8 @@ export const introduce = [
       <span
         >It is seen as the "capital of tourism" in Türkiye.</span
       >
+    </p>
+    <p>
       <span
         >Antalya is the largest Turkish city on the Mediterranean
         coast outside the Aegean region with over one million people

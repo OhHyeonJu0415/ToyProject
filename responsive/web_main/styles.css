@@ -11,7 +11,8 @@ body {
   overflow-x: hidden;
 }
 
-/* header 1920px~1024px */
+/*  1920px~1024px 데스크탑*/
+/* 데스트탑 우선 */
 
 header {
   z-index: 10;
@@ -188,8 +189,8 @@ article {
 }
 
 .mainPage > div > p > span {
-  font-size: 1.1rem;
-  display: inline;
+  font-size: 1rem;
+  display: block;
 }
 
 .mainPage > div > button {
@@ -239,7 +240,7 @@ article {
   padding-left: 10vh;
 }
 
-/* header 1023px~320px */
+/* ~1023px 모바일~태블릿 */
 
 @media (width<1024px) {
   header {
@@ -301,11 +302,40 @@ article {
   .mainTitle {
     font-size: 3.8rem;
   }
+
+  .mainPage {
+    width: 100%;
+  }
+  .introduce1,
+  .introduce2,
+  .introduce3,
+  .introduce4 {
+    background-color: rgba(241, 243, 246, 0.5);
+    padding: 5vw 15vw;
+  }
+
+  .mainPage > div > button {
+    position: static;
+    padding: 1vh 2vh;
+    margin-top: 5%;
+    border: 1px solid black;
+    background-color: rgba(241, 243, 246, 0.4);
+  }
 }
 
-@media (width <=640px) {
+/* ~768px 모바일 */
+
+@media (width <=768px) {
   .mainTitle {
-    font-size: 2.5rem;
+    font-size: 9vw;
+  }
+
+  .mainPage > div > h1 ~ p {
+    display: none;
+  }
+
+  .mainPage > div :nth-child(2) {
+    display: block;
   }
 }
 
