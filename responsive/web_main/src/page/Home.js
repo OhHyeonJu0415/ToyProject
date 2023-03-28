@@ -1,4 +1,5 @@
 import { introduce, path } from "../info/main.js";
+import { setClickEvent } from "../component/setEvent.js";
 
 class Home {
   constructor($container) {
@@ -44,6 +45,9 @@ class Home {
     a.setAttribute("href", `${path[num - 1]}`);
     a.innerText = "see more";
     button.appendChild(a);
+
+    //버튼 클릭 이벤트 생성
+    setClickEvent(button);
     div2.appendChild(button);
 
     div1.appendChild(div2);

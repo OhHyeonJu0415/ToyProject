@@ -1,4 +1,4 @@
-export const data = [
+export const introduce = [
   `<h1>Ankara</h1>
     <p>
       <span>Ankara is the capital of Türkiye.</span>
@@ -15,10 +15,7 @@ export const data = [
     </p>
     <p>
       <span>A must-visit place!</span>
-    </p>
-    <button>
-      <a href="/Ankara"> see more </a>
-    </button>`,
+    </p>`,
   `<h1>Antalya</h1>
     <p>
       <span
@@ -43,10 +40,7 @@ export const data = [
         >Large-scale development and governmental funding has
         promoted tourism.</span
       >
-    </p>
-    <button>
-      <a href="/Antalya"> see more </a>
-    </button>`,
+    </p>`,
   `<h1>Cappadocia</h1>
     <p>
       <span
@@ -62,10 +56,7 @@ export const data = [
         wonders, in particular characterized by fairy chimneys and a
         unique historical and cultural heritage.</span
       >
-    </p>
-    <button>
-      <a href="/Cappadocia"> see more </a>
-    </button>`,
+    </p>`,
   `<h1>Pamukkale</h1>
     <p>
       <span
@@ -88,8 +79,7 @@ export const data = [
         collect in and cascade down the mineral terraces, into pools
         below.</span
       >
-    </p>
-    <button>
-      <a href="/Pamukkale"> see more </a>
-    </button>`,
+    </p>`,
 ];
+
+export const path = ["/Ankara", "/Antalya", "/Cappadocia", "/Pamukkale"];
