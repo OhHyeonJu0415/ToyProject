@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*  1920px~1024px 데스크탑*/
+/* 데스트탑 우선 */
+
+header {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 70px;
+  padding: 0 15vw;
+  background-color: #ffffff36;
+}
+
+header > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > div > h1 {
+  color: black;
+  font-size: 2rem;
+}
+
+header > div > h1::first-letter {
+  color: #fff;
+  background-color: rgb(246, 111, 111);
+  padding: 0 4px;
+}
+
+footer {
+  margin-top: 15vw;
+  width: 100vw;
+  height: 150px;
+  background-color: rgba(241, 243, 246, 0.7);
+  font-size: 1rem;
+  padding: 3vw 15vw;
+  text-align: right;
+}
+
+footer p:first-child {
+  margin-bottom: 1vw;
+  text-decoration: underline;
+  position: relative;
+}
+
+footer p:last-child {
+  position: relative;
+  text-decoration: underline;
+}
+
+footer p:first-child::before,
+footer p:last-child::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 16%;
+  height: 2px;
+  background-color: rgb(233, 180, 180);
+}
+
+footer p:first-child::before {
+  width: 8%;
+}
+
+li {
+  list-style: none;
+  float: left;
+  text-align: center;
+  margin: 0 16px;
+  user-select: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.menuIcon {
+  display: none !important;
+}
+
+.menuIcon > li {
+  display: block;
+}
+
+.menuDrop {
+  display: none;
+}
+
+#menu {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.line {
+  z-index: 9;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.container {
+  width: 70vw;
+  height: 100%;
+}
+
+article {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(208, 225, 219);
+}
+
+.mainPic {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/main3.jpeg");
+  background-position: 40% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: saturate(45%);
+}
+
+.mainTitle {
+  width: 70vw;
+  margin: 0 auto;
+  padding-top: 25vh;
+  color: rgb(0, 55, 156);
+  font-size: 4rem;
+  text-align: right;
+  text-shadow: -1px -1px #ffffff, 1px 1px #ffffff, 0px 1px #ffffff,
+    1px 0px #ffffff, -1px 0px #ffffff, 0px -1px #ffffff;
+}
+
+.part1,
+.part3,
+.part2,
+.part4 {
+  background-color: #fff;
+  width: 100vw;
+  height: 85vh;
+  position: relative;
+}
+
+.part1,
+.part3 {
+  padding-left: 15vw;
+}
+
+.part2,
+.part4 {
+  padding-right: 15vw;
+}
+
+.part4 {
+  margin-bottom: 10vh;
+}
+
+.mainPage {
+  background-size: cover;
+  position: absolute;
+  bottom: 0%;
+  height: 70vh;
+}
+
+.subPic1 {
+  right: 0;
+  width: 55%;
+  background-image: url("./images/ankara/ankara8.jpeg");
+  background-position: 0% 100%;
+}
+
+.subPic2 {
+  width: 45%;
+  background-image: url("./images/antalya/antalya0.jpeg");
+  background-position: 60% 90%;
+  left: 0;
+}
+
+.subPic3 {
+  right: 0;
+  width: 55%;
+  background-image: url("./images/cappadocia/cappadocia5.jpeg");
+  background-position: 20% 100%;
+}
+
+.subPic4 {
+  left: 0;
+  width: 45%;
+  filter: saturate(150%);
+  background-image: url("./images/pamukkale/pamukkale10.jpeg");
+  background-position: 0% 100%;
+}
+
+.mainPage > div {
+  width: 100%;
+}
+
+.mainPage > div > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5vh;
+}
+
+.mainPage > div > p {
+  margin-bottom: 2.5vh;
+}
+
+.mainPage > div > p > span {
+  font-size: 1rem;
+  display: block;
+}
+
+.mainPage > div > button {
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: 10vh;
+  padding: 1vh 2vh;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.introduce1,
+.introduce2,
+.introduce3,
+.introduce4 {
+  padding: 5vh;
+}
+
+.introduce1 {
+  background-color: rgba(241, 243, 246, 1);
+  left: 0;
+  width: 45%;
+  padding-left: 15vw;
+  font-size: 1rem;
+}
+
+.introduce2 {
+  width: 55%;
+  background-color: rgba(241, 243, 246, 0.7);
+  right: 0;
+  padding-right: 15vw;
+  padding-left: 10vh;
+}
+
+.introduce3 {
+  width: 45%;
+  padding-left: 15vw;
+  background-color: rgba(241, 243, 246, 0.7);
+  left: 0;
+}
+
+.introduce4 {
+  width: 55%;
+  background-color: rgba(241, 243, 246, 1);
+  right: 0;
+  padding-right: 15vw;
+  padding-left: 10vh;
+}
+
+/* ~1023px 모바일~태블릿 */
+
+@media (width<1024px) {
+  header {
+    width: 100vw;
+    height: 70px;
+    padding: 0 40px;
+  }
+  header > div > h1 {
+    display: inline;
+    font-size: 1.5rem;
+    margin-left: 16px;
+  }
+  .menu {
+    display: none;
+  }
+  .menuIcon {
+    margin-right: 16px;
+    display: block !important;
+  }
+  .menuDrop {
+    margin-right: 16px;
+    padding: 0.5vw 0;
+    position: absolute;
+    right: 40px;
+    top: 70px;
+    border: 1px solid rgb(197, 197, 197);
+    background-color: #fff;
+  }
+
+  .menuDrop > li {
+    margin: 0;
+    text-align: right;
+    float: none;
+    padding: 1vw 3vw;
+  }
+
+  .menuDrop > li:hover {
+    background-color: rgb(238, 238, 238);
+    font-weight: bold;
+  }
+
+  #menu {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  #menu:checked ~ .menuDrop {
+    display: block;
+  }
+
+  .mainPic {
+    background-position-x: 25%;
+  }
+
+  .mainTitle {
+    font-size: 3.8rem;
+  }
+
+  .mainPage {
+    width: 100%;
+  }
+  .introduce1,
+  .introduce2,
+  .introduce3,
+  .introduce4 {
+    background-color: rgba(241, 243, 246, 0.5);
+    padding: 5vw 15vw;
+  }
+
+  .mainPage > div > button {
+    position: static;
+    padding: 1vh 2vh;
+    margin-top: 5%;
+    border: 1px solid black;
+    background-color: rgba(241, 243, 246, 0.4);
+  }
+}
+
+/* ~768px 모바일 */
+
+@media (width <=768px) {
+  .mainTitle {
+    font-size: 9vw;
+  }
+
+  .mainPage > div > h1 ~ p {
+    display: none;
+  }
+
+  .mainPage > div :nth-child(2) {
+    display: block;
+  }
+}
+
+/* header 1921px~ */
+@media (width>1920px) {
+  header > div {
+    width: 1344px;
+    margin: 0 auto;
+  }
+
+  .mainTitle {
+    position: static;
+    margin: 0 auto;
+    font-size: 4rem;
+    width: 1344px;
+  }
+
+  .mainPage > div {
+    height: 100%;
+    width: 522px;
+    position: relative;
+    /* margin: auto; */
+    /* margin-left: 0; */
+  }
+
+  .odd {
+    margin: auto;
+    margin-right: 0;
+  }
+
+  .even {
+    margin: auto;
+    margin-left: 0;
+  }
+}
+
+/* add css */
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
