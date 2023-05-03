@@ -37,10 +37,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  perspective: 500px;
-  perspective-origin: bottom;
-  transform-style: preserve-3d;
-  /* color: rgb(35, 35, 35); */
   color: #fff;
   align-items: center;
   justify-content: center;
@@ -236,8 +232,6 @@ body {
   right: 24%;
   filter: drop-shadow(3px 3px 0px #000000);
   animation: shake 3s linear infinite;
-  /* animation: wave 5s linear infinite;
-  animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1); */
 }
 
 #flowerBack {
