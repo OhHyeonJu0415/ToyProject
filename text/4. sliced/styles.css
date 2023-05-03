@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "SBAggroB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SBAggroB";
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+
+.top,
+.bottom {
+  font-size: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.top {
+  clip-path: polygon(0 100%, 100% 100%, 100% 60%, 0 40%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #000000 50%, #fff 62%);
+  overflow: hidden;
+  transform: translate(-50%, -50%) translateX(-0.02em) translateY(0.02em);
+}
+
+.bottom {
+  color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 40%);
+}
