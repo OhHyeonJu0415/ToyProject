@@ -29,17 +29,40 @@ body {
 }
 
 .top {
+  color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 40%);
+  animation: toRight 2s linear infinite;
+}
+
+.bottom {
   clip-path: polygon(0 100%, 100% 100%, 100% 60%, 0 40%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: linear-gradient(180deg, #000000 50%, #fff 62%);
+  background-image: linear-gradient(183deg, #000000 50%, #fff 62%);
   overflow: hidden;
-  transform: translate(-50%, -50%) translateX(-0.02em) translateY(0.02em);
+  transform: translate(-50%, -50%) translateX(-0.03em) translateY(0.02em);
+  animation: toLeft 2s cubic-bezier(1, 0.005, 0.515, 1) infinite;
 }
 
-.bottom {
-  color: rgb(255, 255, 255);
-  transform: translate(-50%, -50%);
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 40%);
+@keyframes toLeft {
+  from {
+    transform: translate(-50%, -50%) translateX(-0.04em) translateY(0.01em);
+  }
+  to {
+    transform: translate(-50%, -50%) translateX(-0.2em) translateY(0.025em);
+  }
+}
+
+@keyframes toRight {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  60% {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -50%) translateX(0.1em);
+  }
 }
