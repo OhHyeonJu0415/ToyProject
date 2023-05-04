@@ -34,6 +34,7 @@ video {
 }
 
 h6 {
+  z-index: 99;
   text-align: left;
   font-size: 5rem;
   color: rgba(235, 162, 60, 1);
