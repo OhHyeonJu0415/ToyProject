@@ -22,6 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto 0;
+  overflow: hidden;
 }
 
 h3 {
@@ -50,8 +51,6 @@ h3 {
   height: 12vw;
   background-color: rgb(255, 155, 135);
   border-radius: 50%;
-  /* animation: ball 5s infinite; */
-  /* animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
 }
 
 @keyframes ball {
