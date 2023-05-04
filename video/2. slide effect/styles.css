@@ -32,3 +32,23 @@ video {
   height: 100%;
   mix-blend-mode: multiply;
 }
+
+h6 {
+  text-align: left;
+  font-size: 5rem;
+  color: rgba(235, 162, 60, 1);
+}
+
+.top {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  transform: translate(0, -50%);
+}
+
+.bottom {
+  position: absolute;
+  left: 5%;
+  top: 90%;
+  transform: translate(0, -50%);
+}
