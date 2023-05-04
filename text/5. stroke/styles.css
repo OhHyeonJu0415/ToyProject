@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.container {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  height: 100vh;
+  font-size: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+}
+
+h3 {
+  text-transform: uppercase;
+  position: absolute;
+}
+
+.front {
+  z-index: 99;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+.back {
+  z-index: 1;
+  color: #fff;
+}
+
+.ball {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  width: 12vw;
+  height: 12vw;
+  background-color: rgb(255, 155, 135);
+  border-radius: 50%;
+  /* animation: ball 5s infinite; */
+  /* animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+}
+
+@keyframes ball {
+  from {
+    top: 20%;
+    right: 5%;
+  }
+  50% {
+    top: 50%;
+    right: 50%;
+  }
+  to {
+    top: 20%;
+    right: 100%;
+  }
+}
