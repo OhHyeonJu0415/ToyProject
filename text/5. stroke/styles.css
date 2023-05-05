@@ -52,18 +52,3 @@ h3 {
   background-color: rgb(255, 155, 135);
   border-radius: 50%;
 }
-
-@keyframes ball {
-  from {
-    top: 20%;
-    right: 5%;
-  }
-  50% {
-    top: 50%;
-    right: 50%;
-  }
-  to {
-    top: 20%;
-    right: 100%;
-  }
-}
