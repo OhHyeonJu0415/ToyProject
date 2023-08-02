@@ -1,8 +1,9 @@
 import { dayButton, nightButton } from "./common.js"; //day button
 import { dayTitle, nightTitle } from "./common.js"; //main title
+import { turn } from "./common.js"; //background
 
 dayButton.addEventListener("click", () => {
-  document.getElementById("turn").style.transform = "rotate(0deg)";
+  turn.classList.remove("rotateBack");
   document.body.classList.remove("bodyChangeColor");
 
   //버튼 색 바꾸기
