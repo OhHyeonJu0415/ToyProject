@@ -1,4 +1,6 @@
 const nightButton = document.getElementById("nightButton");
+const dayTitle = document.getElementById("textDay");
+const textNight = document.getElementById("textNight");
 
 nightButton.addEventListener("click", () => {
   //배경 밤으로
@@ -12,13 +14,10 @@ nightButton.addEventListener("click", () => {
   document.getElementById("nightButton").style.border = "0.2rem white solid";
 
   //낮 글씨 지우기
-  document.getElementById("textDay").classList.add("visibleHidden");
-  //   document.getElementById("dayTitle").style.removeProperty("animation");
+  dayTitle.classList.add("visibleHidden");
 
   //밤 글씨 띄우기
-  //   document.getElementById("textNight").style.transition = "2s";
-  document.getElementById("textNight").classList.remove("visibleHidden");
-  document.getElementById("text1").style.animation = "text1 2s 2s infinite";
+  textNight.classList.remove("visibleHidden");
 
   //ufo 애니메이션
   document.getElementById("ufo").style.animation = "ufoMove 10s 1s infinite";
