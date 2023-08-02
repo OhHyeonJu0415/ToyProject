@@ -1,6 +1,5 @@
-const nightButton = document.getElementById("nightButton");
-const dayTitle = document.getElementById("textDay");
-const textNight = document.getElementById("textNight");
+import { nightButton } from "./common.js"; //night button
+import { dayTitle, nightTitle } from "./common.js"; //main title
 
 nightButton.addEventListener("click", () => {
   //배경 밤으로
@@ -17,7 +16,7 @@ nightButton.addEventListener("click", () => {
   dayTitle.classList.add("visibleHidden");
 
   //밤 글씨 띄우기
-  textNight.classList.remove("visibleHidden");
+  nightTitle.classList.remove("visibleHidden");
 
   //ufo 애니메이션
   document.getElementById("ufo").style.animation = "ufoMove 10s 1s infinite";
