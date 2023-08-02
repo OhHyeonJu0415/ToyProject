@@ -4,19 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styels/common.css" />
+    <link rel="stylesheet" href="styels/dayStyle.css" />
+    <link rel="stylesheet" href="styels/nightStyle.css" />
+    <link rel="stylesheet" href="styels/style.css" />
     <title>Day And Night</title>
   </head>
   <body>
     <div class="container">
-      <button id="dayButton">D a y</button>
-      <div id="textDay">
-        <h1 id="text0">WAKE UP !</h1>
-        <h1 id="text0">it's time to start</h1>
+      <!-- 버튼 -->
+      <div class="buttons">
+        <!-- 낮 -->
+        <button id="dayButton">D a y</button>
+        <!-- 밤 -->
+        <button id="nightButton">N i g h t</button>
       </div>
-      <div id="textNight">
-        <h1 id="text1">EMERGENCY!</h1>
+
+      <!-- 낮 타이틀 -->
+      <div id="textDay" class="mainTitle">
+        <h1 id="dayTitle">WAKE UP!</h1>
+        <h1 id="dayTitle">it's time to start</h1>
       </div>
+
+      <!-- 밤 타이틀 -->
+      <div id="textNight" class="visibleHidden mainTitle">
+        <h1 id="nightTitle">EMERGENCY!</h1>
+      </div>
+
       <div class="backContainer">
         <div class="back" id="turn">
           <!-- Day -->
@@ -133,7 +147,6 @@
           </div>
         </div>
       </div>
-      <button id="nightButton">N i g h t</button>
     </div>
 
     <script type="module" src="./day.js"></script>
