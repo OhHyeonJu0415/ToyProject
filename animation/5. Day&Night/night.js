@@ -3,7 +3,7 @@ const nightButton = document.getElementById("nightButton");
 nightButton.addEventListener("click", () => {
   //배경 밤으로
   document.getElementById("turn").style.transform = "rotate(180deg)";
-  document.body.style.backgroundColor = "black";
+  document.body.classList.add("bodyChangeColor");
 
   //버튼 색 바꾸기
   document.getElementById("dayButton").style.color = "white";
@@ -13,7 +13,7 @@ nightButton.addEventListener("click", () => {
 
   //낮 글씨 지우기
   document.getElementById("textDay").style.opacity = "0";
-  document.getElementById("text0").style.removeProperty("animation");
+  document.getElementById("dayTitle").style.removeProperty("animation");
 
   //밤 글씨 띄우기
   document.getElementById("textNight").style.transition = "2s";

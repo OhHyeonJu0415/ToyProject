@@ -2,7 +2,7 @@ const dayButton = document.getElementById("dayButton");
 
 dayButton.addEventListener("click", () => {
   document.getElementById("turn").style.transform = "rotate(0deg)";
-  document.body.style.backgroundColor = "rgb(253, 250, 240)";
+  document.body.classList.remove("bodyChangeColor");
 
   //버튼 색 바꾸기
   document.getElementById("dayButton").style.color = "rgb(255, 148, 131)";
@@ -19,7 +19,7 @@ dayButton.addEventListener("click", () => {
   //낮 글씨 띄우기
   document.getElementById("textDay").style.transition = "2s";
   document.getElementById("textDay").style.opacity = "1";
-  document.getElementById("text0").style.animation = "text1 2s 2s infinite";
+  document.getElementById("dayTitle").style.animation = "text1 2s 2s infinite";
 
   //2초 뒤(배경 바뀌고 난 뒤) ufo 애니메이션 지우기
   setTimeout(
