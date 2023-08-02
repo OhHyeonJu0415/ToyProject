@@ -72,3 +72,8 @@ button {
   letter-spacing: 3px;
   text-align: center;
 }
+
+.dayChanged {
+  color: white;
+  border: 0.2px white solid;
+}

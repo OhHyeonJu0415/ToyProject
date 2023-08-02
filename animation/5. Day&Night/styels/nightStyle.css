@@ -1,11 +1,11 @@
 /* button */
-#nightButton {
+.nightButton {
   color: rgb(124, 99, 237);
   border: 2px rgb(126, 104, 223) solid;
   filter: drop-shadow(0px 0px 2px rgb(154, 114, 255));
 }
 
-#nightButton:hover {
+.nightButton:hover {
   background-color: rgba(70, 70, 255, 0.1);
 }
 

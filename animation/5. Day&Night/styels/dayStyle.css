@@ -1,11 +1,11 @@
 /* button */
-#dayButton {
+.dayButton {
   color: rgb(255, 148, 131);
   border: 2px rgb(255, 164, 157) solid;
   filter: drop-shadow(0px 0px 2px rgb(255, 174, 151));
 }
 
-#dayButton:hover {
+.dayButton:hover {
   background-color: rgba(255, 116, 62, 0.1);
 }
 

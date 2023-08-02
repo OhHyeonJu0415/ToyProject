@@ -1,4 +1,4 @@
-import { dayButton } from "./common.js"; //day button
+import { dayButton, nightButton } from "./common.js"; //day button
 import { dayTitle, nightTitle } from "./common.js"; //main title
 
 dayButton.addEventListener("click", () => {
@@ -6,12 +6,8 @@ dayButton.addEventListener("click", () => {
   document.body.classList.remove("bodyChangeColor");
 
   //버튼 색 바꾸기
-  document.getElementById("dayButton").style.color = "rgb(255, 148, 131)";
-  document.getElementById("dayButton").style.border =
-    "0.2rem rgb(255, 164, 157) solid";
-  document.getElementById("nightButton").style.color = "rgb(124, 99, 237)";
-  document.getElementById("nightButton").style.border =
-    "0.2rem rgb(126, 104, 223) solid";
+  dayButton.classList.remove("dayChanged");
+  nightButton.classList.remove("dayChanged");
 
   //밤 글씨 지우기
   nightTitle.classList.add("visibleHidden");
