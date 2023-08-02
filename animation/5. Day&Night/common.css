@@ -14,7 +14,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  transition: 2s;
+  transition: 1s;
   background-color: rgb(253, 250, 240);
 }
 
@@ -23,9 +23,11 @@ body {
 }
 
 .container {
-  position: relative;
-  min-width: 100vw;
-  min-height: 100vh;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100vw;
+  height: 1000px;
 }
 
 button {
@@ -51,4 +53,22 @@ button {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.visibleHidden {
+  visibility: hidden;
+}
+
+.mainTitle {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "bitbit";
+  -webkit-text-stroke-width: 0.5px;
+  width: 100%;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
 }

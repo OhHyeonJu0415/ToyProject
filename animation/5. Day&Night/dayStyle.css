@@ -9,7 +9,13 @@
   background-color: rgba(255, 116, 62, 0.1);
 }
 
+/* title */
+#textDay {
+  -webkit-text-stroke-color: rgb(255, 170, 170);
+  color: rgb(253, 250, 240);
+  white-space: nowrap;
+}
+
 #dayTitle {
-  opacity: 0;
-  animation: text1 2s infinite;
+  /* animation: text1 2s infinite; */
 }

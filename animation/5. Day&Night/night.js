@@ -12,12 +12,12 @@ nightButton.addEventListener("click", () => {
   document.getElementById("nightButton").style.border = "0.2rem white solid";
 
   //낮 글씨 지우기
-  document.getElementById("textDay").style.opacity = "0";
-  document.getElementById("dayTitle").style.removeProperty("animation");
+  document.getElementById("textDay").classList.add("visibleHidden");
+  //   document.getElementById("dayTitle").style.removeProperty("animation");
 
   //밤 글씨 띄우기
-  document.getElementById("textNight").style.transition = "2s";
-  document.getElementById("textNight").style.opacity = "1";
+  //   document.getElementById("textNight").style.transition = "2s";
+  document.getElementById("textNight").classList.remove("visibleHidden");
   document.getElementById("text1").style.animation = "text1 2s 2s infinite";
 
   //ufo 애니메이션

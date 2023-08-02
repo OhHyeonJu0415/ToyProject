@@ -13,13 +13,13 @@ dayButton.addEventListener("click", () => {
     "0.2rem rgb(126, 104, 223) solid";
 
   //밤 글씨 지우기
-  document.getElementById("textNight").style.opacity = "0";
-  document.getElementById("text1").style.removeProperty("animation");
+  document.getElementById("textNight").classList.add("visibleHidden");
+  // document.getElementById("text1").style.removeProperty("animation");
 
   //낮 글씨 띄우기
-  document.getElementById("textDay").style.transition = "2s";
-  document.getElementById("textDay").style.opacity = "1";
-  document.getElementById("dayTitle").style.animation = "text1 2s 2s infinite";
+  // document.getElementById("textDay").style.transition = "2s";
+  document.getElementById("textDay").classList.remove("visibleHidden");
+  // document.getElementById("dayTitle").style.animation = "text1 2s 2s infinite";
 
   //2초 뒤(배경 바뀌고 난 뒤) ufo 애니메이션 지우기
   setTimeout(

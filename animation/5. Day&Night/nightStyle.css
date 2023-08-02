@@ -8,3 +8,8 @@
 #nightButton:hover {
   background-color: rgba(70, 70, 255, 0.1);
 }
+
+/* title */
+#textNight {
+  -webkit-text-stroke-color: rgb(252, 175, 175);
+}
