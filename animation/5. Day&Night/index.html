@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styels/animations.css" />
     <link rel="stylesheet" href="styels/dayStyle.css" />
     <link rel="stylesheet" href="styels/nightStyle.css" />
-    <link rel="stylesheet" href="styels/animations.css" />
     <link rel="stylesheet" href="styels/style.css" />
     <link rel="stylesheet" href="styels/common.css" />
     <title>Day And Night</title>
@@ -23,13 +23,13 @@
 
       <!-- 낮 타이틀 -->
       <div id="textDay" class="mainTitle">
-        <h1 id="dayTitle" class="Ani_mainTitle">WAKE UP!</h1>
-        <h1 id="dayTitle" class="Ani_mainTitle">it's time to start</h1>
+        <h2 id="dayTitle" class="Ani_mainTitle">WAKE UP!</h2>
+        <h2 id="dayTitle" class="Ani_mainTitle">it's time to start</h2>
       </div>
 
       <!-- 밤 타이틀 -->
       <div id="textNight" class="visibleHidden mainTitle">
-        <h1 id="nightTitle" class="Ani_mainTitle">EMERGENCY!</h1>
+        <h2 id="nightTitle" class="Ani_mainTitle">EMERGENCY!</h2>
       </div>
 
       <div class="backContainer">
@@ -40,13 +40,13 @@
 
             <!-- cloud -->
             <div class="cloud">
-              <div class="leftCloud">
+              <div id="cloud" class="leftCloud Ani_clouds">
                 <div class="baseCloud"></div>
                 <div class="clouds clouds1"></div>
                 <div class="clouds clouds2"></div>
                 <div class="clouds clouds3"></div>
               </div>
-              <div class="rightCloud">
+              <div id="cloud" class="rightCloud Ani_clouds">
                 <div class="baseRightCloud"></div>
                 <div class="clouds clouds1"></div>
                 <div class="clouds clouds2"></div>
@@ -55,7 +55,7 @@
             </div>
 
             <!-- airplane -->
-            <div id="airPlane">
+            <div id="airPlane" class="Ani_fly">
               <img src="airPlane.svg" />
             </div>
 
@@ -71,7 +71,9 @@
                 <div class="bulid bulid2">
                   <div class="glass"></div>
                 </div>
-                <div class="bulid bulid3"><div class="glass"></div></div>
+                <div class="bulid bulid3">
+                  <div class="glass"></div>
+                </div>
                 <div class="bulid bulid4">
                   <div class="glass"></div>
                 </div>
@@ -86,7 +88,9 @@
                 <div class="bulid bulid2">
                   <div class="glass"></div>
                 </div>
-                <div class="bulid bulid3"><div class="glass"></div></div>
+                <div class="bulid bulid3">
+                  <div class="glass"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -109,7 +113,9 @@
                 <div class="bulid bulid2">
                   <div class="glass"></div>
                 </div>
-                <div class="bulid bulid3"><div class="glass"></div></div>
+                <div class="bulid bulid3">
+                  <div class="glass"></div>
+                </div>
                 <div class="bulid bulid4">
                   <div class="glass"></div>
                 </div>
@@ -124,7 +130,9 @@
                 <div class="bulid bulid2">
                   <div class="glass"></div>
                 </div>
-                <div class="bulid bulid3"><div class="glass"></div></div>
+                <div class="bulid bulid3">
+                  <div class="glass"></div>
+                </div>
               </div>
             </div>
 
@@ -137,13 +145,14 @@
               <div class="starShape star5"></div>
               <div class="starShape star6"></div>
               <div class="starShape star7"></div>
+              <div class="starShape star8"></div>
             </div>
 
             <!-- ufo -->
             <div class="ufo" id="ufo">
               <div id="vim"></div>
-              <div></div>
-              <div></div>
+              <div class="ufoBottom"></div>
+              <div class="ufoTop"></div>
             </div>
           </div>
         </div>
