@@ -27,12 +27,12 @@ body {
   top: 50%;
   transform: translate(0, -50%);
   width: 100vw;
-  height: 800px;
+  height: 700px;
 }
 
 button {
   width: 160px;
-  height: 90px;
+  height: 80px;
   cursor: pointer;
   border-radius: 20px;
   background-color: transparent;
@@ -67,7 +67,6 @@ button {
   font-family: "bitbit";
   -webkit-text-stroke-width: 0.5px;
   width: 100%;
-  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
@@ -107,4 +106,95 @@ button {
 
 .rotateBack {
   transform: rotate(180deg);
+}
+
+.day,
+.night {
+  position: relative;
+  overflow: hidden;
+}
+
+.sun,
+.moon,
+.moonShadow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.buliding {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 90%;
+  height: 30%;
+  opacity: 0.4;
+}
+
+.buliding1,
+.buliding2 {
+  position: absolute;
+  display: flex;
+  right: 0;
+  width: 50%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.bulid {
+  background-color: black;
+  width: 15%;
+  height: 80%;
+  margin: 0 6% 0 0;
+  padding: 10% 2% 2% 2%;
+  filter: drop-shadow(0px 0px 2px rgb(52, 52, 45));
+}
+
+.bulid1 {
+  width: 17%;
+  height: 50%;
+  margin: 0 2% 0 2%;
+  padding: 6% 2% 2% 2%;
+}
+
+.bulid2 {
+  width: 12%;
+  height: 78%;
+  padding: 12% 2% 2% 2%;
+}
+
+.bulid3 {
+  width: 12%;
+  height: 70%;
+  margin: 0 16% 0 0;
+}
+
+.bulid4 {
+  width: 20%;
+  height: 64%;
+  padding: 8% 2% 2% 2%;
+}
+
+.buliding2 {
+  left: 8%;
+  width: 35%;
+  height: 70%;
+}
+
+.glass {
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(210, 210, 154);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 40%,
+    0% 40%,
+    0% 60%,
+    100% 60%,
+    100% 100%,
+    0 100%
+  );
 }

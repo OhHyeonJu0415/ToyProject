@@ -1,3 +1,4 @@
+/* common */
 @keyframes Ani_mainTitle {
   0%,
   100% {
@@ -9,5 +10,120 @@
 }
 
 .Ani_mainTitle {
-  /* animation: Ani_mainTitle 2s infinite; */
+  animation: Ani_mainTitle 2s infinite;
+}
+
+/* day */
+@keyframes clouds {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.Ani_clouds {
+  animation: clouds 4s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    opacity: 0;
+    width: 50px;
+    right: -10%;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 22px;
+    right: 80%;
+    transform: translateY(-100px);
+  }
+}
+
+.Ani_fly {
+  animation: fly 3s ease-in infinite;
+}
+
+/* night */
+@keyframes Ani_ufoMove {
+  0%,
+  100% {
+    top: 20%;
+    right: 12%;
+    transform: rotate(21deg);
+  }
+  15%,
+  90% {
+    top: 32%;
+    right: 24%;
+    transform: rotate(-20deg);
+  }
+  28% {
+    top: 22%;
+    right: 42%;
+    transform: rotate(15deg);
+  }
+  35% {
+    top: 28%;
+    right: 57%;
+    transform: rotate(-10deg);
+  }
+  45% {
+    top: 35%;
+    right: 72%;
+    transform: rotate(28deg);
+  }
+  52% {
+    top: 28%;
+    right: 79%;
+    transform: rotate(20deg);
+  }
+  60% {
+    top: 24%;
+    right: 62%;
+    transform: rotate(-15deg);
+  }
+  70% {
+    top: 19%;
+    right: 50%;
+    transform: rotate(15deg);
+  }
+  80% {
+    top: 22%;
+    right: 36%;
+    transform: rotate(-4deg);
+  }
+}
+
+.Ani_ufo {
+  animation: Ani_ufoMove 10s infinite;
+}
+
+@keyframes Ani_vim {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  27%,
+  54%,
+  88% {
+    opacity: 1;
+  }
+  34%,
+  70% {
+    opacity: 0;
+  }
+}
+
+.Ani_vim {
+  animation: Ani_vim 7s infinite;
 }

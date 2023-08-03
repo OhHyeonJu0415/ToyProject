@@ -13,3 +13,151 @@
 #textNight {
   -webkit-text-stroke-color: rgb(252, 175, 175);
 }
+
+/* moon */
+.moon {
+  background-color: rgb(212, 199, 99);
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, -10%);
+}
+
+.moonShadow {
+  background-color: rgb(5, 5, 47);
+  left: 51.5%;
+  bottom: 5%;
+  transform: translate(-51.5%, 7%);
+  z-index: 1;
+}
+
+/* star */
+.star {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 0px 2px rgb(244, 239, 143));
+}
+
+.starShape {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: rgb(235, 226, 162);
+  clip-path: polygon(
+    50% 0,
+    60% 40%,
+    100% 50%,
+    60% 60%,
+    50% 100%,
+    40% 60%,
+    0 50%,
+    40% 40%
+  );
+}
+
+.star1 {
+  right: 38%;
+  bottom: 20%;
+}
+
+.star2 {
+  width: 14px;
+  height: 14px;
+  left: 30%;
+  bottom: 31%;
+}
+
+.star3 {
+  width: 7px;
+  height: 7px;
+  left: 35%;
+  bottom: 26%;
+}
+
+.star4 {
+  width: 18px;
+  height: 18px;
+  right: 42%;
+  bottom: 40%;
+  background-color: rgb(235, 226, 162);
+}
+
+.star5 {
+  width: 6px;
+  height: 6px;
+  right: 32%;
+  bottom: 30%;
+}
+
+.star6 {
+  width: 10px;
+  height: 10px;
+  left: 40%;
+  bottom: 48%;
+}
+
+.star7 {
+  width: 10px;
+  height: 10px;
+  right: 20%;
+  bottom: 48%;
+}
+
+.star8 {
+  width: 10px;
+  height: 10px;
+  left: 20%;
+  bottom: 55%;
+}
+
+/* ufo */
+.ufo {
+  position: absolute;
+  width: 70px;
+  height: 35px;
+  top: 22%;
+  right: 12%;
+  transform: rotate(32deg);
+  filter: drop-shadow(0px 0px 2px rgb(255, 251, 174));
+}
+
+.ufoTop {
+  position: absolute;
+  width: 50%;
+  height: 40%;
+  background-color: rgb(238, 252, 255);
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.ufoBottom {
+  position: absolute;
+  width: 100%;
+  height: 26%;
+  background-color: rgb(102, 188, 110);
+  top: 30%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+}
+
+#vim {
+  position: absolute;
+  width: 30%;
+  background: linear-gradient(
+    to bottom,
+    rgb(203, 255, 189, 0.8),
+    rgb(203, 255, 189, 0.01)
+  );
+  bottom: 38px;
+  right: 50%;
+  height: 70px;
+  transform: translate(50%, 0) rotateX(180deg);
+  clip-path: polygon(40% 0%, 60% 0%, 85% 100%, 15% 100%);
+  opacity: 1;
+  /* animation: ufoAttack 10s infinite; */
+}

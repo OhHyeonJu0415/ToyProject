@@ -15,3 +15,126 @@
   color: rgb(253, 250, 240);
   white-space: nowrap;
 }
+
+/* sun */
+.sun {
+  background-color: rgb(255, 205, 53);
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  box-shadow: inset 0 0 3px 1.5px rgb(226, 182, 50);
+}
+
+/* cloud */
+.cloud {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 80%;
+  height: 32%;
+  filter: drop-shadow(2px 2px 2px rgb(213, 242, 255));
+}
+
+.leftCloud,
+.rightCloud {
+  overflow: hidden;
+  position: absolute;
+  width: 30%;
+  height: 55%;
+  bottom: 10%;
+  right: 60%;
+  opacity: 0.4;
+}
+
+.baseCloud {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: white;
+}
+
+.rightCloud {
+  width: 25%;
+  height: 35%;
+  top: 10%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.baseRightCloud {
+  position: absolute;
+  left: 5%;
+  width: 70%;
+  height: 32%;
+  bottom: 0;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 35px;
+  background-color: white;
+}
+
+.clouds {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.clouds1 {
+  width: 20%;
+  height: 50%;
+  bottom: 0%;
+  left: 12%;
+}
+
+.clouds2 {
+  width: 40%;
+  height: 70%;
+  bottom: 0%;
+  left: 25%;
+}
+
+.clouds3 {
+  width: 40%;
+  height: 60%;
+  bottom: -10%;
+  right: 10%;
+}
+
+/* airplane */
+#airPlane {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  bottom: 22%;
+  right: -10%;
+}
+
+#airPlane > img {
+  width: 100%;
+}
+
+/* buliding */
+.day > .buliding {
+  opacity: 1;
+  bottom: 0;
+  transform: translate(-50%, 0%) scaleY(-1);
+}
+
+.day > .buliding > .buliding1 > .bulid,
+.day > .buliding > .buliding2 > .bulid {
+  background-color: rgb(16, 12, 53);
+}
+
+.day > .buliding > .buliding1 > .bulid > .glass,
+.day > .buliding > .buliding2 > .bulid > .glass {
+  opacity: 0.9;
+  background-color: rgb(222, 247, 255);
+}
