@@ -1,6 +1,14 @@
-import { dayButton, nightButton } from "./common.js"; //day button
-import { dayTitle, nightTitle } from "./common.js"; //main title
-import { turn } from "./common.js"; //background
+import {
+  dayButton,
+  nightButton,
+  dayTitle,
+  nightTitle,
+  turn,
+  ufo,
+  vim,
+  cloud,
+  airPlane,
+} from "./common.js"; //buttons, titles, background, animations
 
 dayButton.addEventListener("click", () => {
   turn.classList.remove("rotateBack");
@@ -16,9 +24,12 @@ dayButton.addEventListener("click", () => {
   //낮 글씨 띄우기
   dayTitle.classList.remove("visibleHidden");
 
-  //2초 뒤(배경 바뀌고 난 뒤) ufo 애니메이션 지우기
-  setTimeout(
-    () => document.getElementById("ufo").style.removeProperty("animation"),
-    2000
-  );
+  //낮 애니메이션 띄우기
+  cloud.classList.add("Ani_clouds");
+  airPlane.classList.add("Ani_fly");
+
+  // ufo 애니메이션 지우기
+  ufo.classList.add("visibleHidden");
+  ufo.classList.remove("Ani_ufo");
+  vim.classList.remove("Ani_vim");
 });
